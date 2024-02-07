@@ -17,8 +17,9 @@ body {
 :root {
   --primary-background: #080808;
   --secondary-background: #292929;
+  --third-background: #252525;
   --primary-text: #fff;
-  --secondary-text: #999;
+
   /* --color-text: #39ace7; */
   /* --color-text:   #00ccff; */
 }
@@ -27,15 +28,13 @@ body {
   background-color: var(--primary-background);
 }
 
-/*! ------------------------- NAVIGATION-START ------------------------- */
+/** ------------------------- NAVIGATION-START ------------------------- */
 
 #header {
   width: 100%;
   height: 100vh;
-  /* background-image: url(img/background-img.jpg); */
-  /* background-size: cover; */
-  /* background-position: center; */
 }
+
 .container {
   padding: 1rem 15rem;
 }
@@ -47,13 +46,12 @@ body {
 }
 .main-nav h1 {
   font-size: 4.4rem;
-  font-weight: 800;
 }
 .main-nav-list {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 }
 .main-nav-link:link,
 .main-nav-link:visited {
@@ -63,7 +61,7 @@ body {
   font-size: 2rem;
   font-weight: 500;
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--primary-text);
   position: relative;
   transition: 0.5s ease;
 
@@ -71,30 +69,7 @@ body {
     color: var(--primary-text);
   }
 }
-/* .main-nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(30deg, #00ccff, #d500f9);
-  bottom: -0.2rem;
-  left: 0;
-  border-radius: 50px;
-}
 
-.main-nav-link:hover::after {
-  animation: line 4s infinite;
-}
-@keyframes line {
-  50% {
-    width: 100%;
-    left: 0;
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
-} */
 .main-nav-link::after {
   content: "";
   position: absolute;
@@ -132,9 +107,9 @@ body {
   color: var(--primary-text);
 }
 
-/*! ------------------------- NAVIGATION-END ------------------------- */
+/** ------------------------- NAVIGATION-END ------------------------- */
 
-/*! ------------------------- ABOUT-START ------------------------- */
+/** ------------------------- ABOUT-START ------------------------- */
 
 #about {
   background-color: var(--secondary-background);
@@ -143,9 +118,9 @@ body {
   height: 70rem;
 }
 #about h1 {
-  font-size: 5.2rem;
+  font-size: 6.2rem;
   text-align: center;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.4rem;
 }
 .row {
   margin: 0 auto;
@@ -171,7 +146,6 @@ body {
   letter-spacing: 0.2rem;
 }
 .about-col-2 {
-  /* display: flex; */
   display: grid;
   grid-template-columns: 1fr;
   flex-direction: column;
@@ -201,4 +175,321 @@ body {
   font-size: 2rem;
   cursor: pointer;
 }
-/*! ------------------------- ABOUT-END ------------------------- */
+/** ------------------------- ABOUT-END ------------------------- */
+
+/** ------------------------- SKILL-START ------------------------- */
+
+#skills {
+  background-color: var(--third-background);
+  padding: 4rem 0 8rem 0;
+  color: var(--primary-text);
+}
+#skills h1 {
+  font-size: 6.2rem;
+  text-align: center;
+  letter-spacing: 0.4rem;
+}
+.skill-container {
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100rem;
+  height: 60rem;
+  padding-top: 4rem;
+}
+
+.timeline {
+  width: 20rem;
+}
+
+.timeline-item {
+  font-size: 1.6rem;
+  font-weight: 500;
+  position: relative;
+  padding: 0 0 30px 0;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 22px; /* Adjust this value to align the line with the center of the dot */
+  bottom: 0;
+  width: 2px;
+  background-color: #ccc;
+  padding: 20px 0;
+}
+
+.timeline-item:last-child::after {
+  display: none; /* Hide line after last item */
+}
+
+.timeline-item.active::before {
+  background-color: #007bff;
+}
+
+.timeline-item.active {
+  color: #007bff;
+}
+
+.timeline-item.left {
+  position: relative;
+}
+
+.timeline-item.left::before {
+  top: 0.5rem;
+  left: 8rem;
+  /* Adjust this value to position the dot */
+}
+
+.timeline-item.left::after {
+  top: 2.8rem;
+  left: 8.5rem;
+  /* Adjust this value to position the line */
+}
+
+.timeline-item.opposite-side {
+  /* text-align: right; */
+  margin-left: 11rem;
+}
+
+.timeline-item.opposite-side::before {
+  top: 0.5rem;
+  left: -3rem;
+  /* Adjust this value to position the dot */
+}
+
+.timeline-item.opposite-side::after {
+  top: 2.8rem;
+  left: -2.5rem;
+  /* Adjust this value to position the line */
+}
+.content {
+  width: 75rem;
+  padding: 5rem 6rem;
+  border-radius: 15px;
+  box-shadow: 3px 3px 29px 0px #007bff4b;
+  /* box-shadow: 3px 3px 29px 0px rgba(255, 154, 141, 0.25); */
+
+  & h2 {
+    font-size: 3.6rem;
+  }
+
+  & p {
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    margin-top: 1rem;
+
+    line-height: 2.6rem;
+  }
+}
+.svg-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.svg {
+  margin-top: 5rem;
+  height: 15rem;
+  filter: grayscale(1);
+  opacity: 0.3;
+  fill: #c2baba;
+}
+/** ------------------------- SKILL-END ------------------------- */
+
+/** ------------------------- EXPERIENCE-START ------------------------- */
+#experience {
+  background-color: var(--secondary-background);
+  padding: 4rem 0;
+  color: var(--primary-text);
+}
+
+#experience h1 {
+  font-size: 6.2rem;
+  text-align: center;
+  letter-spacing: 0.4rem;
+}
+
+.experience-container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 110rem;
+  height: 60rem;
+  padding-top: 4rem;
+}
+
+.experience-box {
+  border-right: 1px solid var(--primary-text);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 50rem;
+
+  & img {
+    width: 12rem;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  & h2 {
+    margin: 0 4rem 0 0;
+    padding-left: 4rem;
+    font-size: 5.2rem;
+    line-height: 6rem;
+    cursor: pointer;
+  }
+
+  & p {
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.internship-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  border-bottom: 1px solid var(--primary-text);
+}
+
+.about-internship {
+  width: 75rem;
+  padding-left: 6rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 48rem;
+
+  & h4 {
+    font-size: 3.6rem;
+  }
+  & h2 {
+    font-size: 2.4rem;
+  }
+
+  & h3 {
+    font-size: 1.8rem;
+  }
+
+  & p {
+    margin-top: 0.5rem;
+    font-size: 1.6rem;
+  }
+}
+
+.internship-details {
+  margin-top: 1.8rem;
+
+  & h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  & ul {
+    width: 65rem;
+    padding-left: 2.2rem;
+  }
+
+  & ul li {
+    margin-top: 0.4rem;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.1rem;
+  }
+}
+#education {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.education-details {
+  width: 75rem;
+  padding: 2rem 2rem 2rem 4rem;
+}
+
+/** ------------------------- EXPERIENCE-END ------------------------- */
+/** ------------------------- CONTACT-START ------------------------- */
+#contact {
+  background-color: var(--third-background);
+  padding-top: 4rem;
+  color: var(--primary-text);
+}
+#contact h1 {
+  font-size: 4.4rem;
+  letter-spacing: 0.4rem;
+}
+.contact-left {
+  flex-basis: 35%;
+}
+.contact-right {
+  flex-basis: 60%;
+}
+.contact-left p {
+  margin-top: 3rem;
+  font-size: 2rem;
+
+  & i {
+    color: #007bff;
+    margin-right: 1.5rem;
+    font-size: 2.5rem;
+  }
+}
+.social-icons {
+  margin-top: 3rem;
+
+  & a {
+    text-decoration: none;
+    font-size: 3rem;
+    margin-right: 1.5rem;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+  }
+}
+.social-icons a:hover {
+  color: #007bff;
+  transform: translateY(-5px);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  color: #fff;
+  font-size: 1.8rem;
+  border-radius: 0.6rem;
+}
+.copyright {
+  /* width: 100%; */
+  text-align: center;
+  background-color: #007bff;
+  padding: 2.5rem 0;
+  font-weight: 300;
+  margin-top: 8rem;
+  font-size: 1.8rem;
+}
+/** ------------------------- CONTACT-END ------------------------- */
