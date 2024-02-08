@@ -9,32 +9,38 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  background-color: var(--primary-background);
+  overflow-x: hidden;
 }
 :root {
-  --primary-background: #080808;
-  --secondary-background: #292929;
-  --third-background: #252525;
-  --primary-text: #fff;
+  --primary-background: #111111;
 
-  /* --color-text: #39ace7; */
-  /* --color-text:   #00ccff; */
-}
+  --primary-text: #f0f0f0;
 
-body {
-  background-color: var(--primary-background);
+  --main-color: #009bd9;
+
+  --mainGradient-color: linear-gradient(30deg, #2c69d1, #0abcf9);
+
+  /* --secondary-background: #1a1a1a; */
+  /* --secondary-background: #171717; */
 }
 
 /** ------------------------- NAVIGATION-START ------------------------- */
 
 #header {
-  width: 100%;
-  height: 100vh;
+  height: 82rem;
 }
-
+.svg-ani {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  opacity: 0.4;
+}
 .container {
   padding: 1rem 15rem;
 }
@@ -44,6 +50,7 @@ body {
   justify-content: space-between;
   color: var(--primary-text);
 }
+
 .main-nav h1 {
   font-size: 4.4rem;
 }
@@ -75,7 +82,8 @@ body {
   position: absolute;
   width: 0;
   height: 3px;
-  background: linear-gradient(30deg, #00ccff, #d500f9);
+  /* background: linear-gradient(30deg, #00ccff, #d500f9); */
+  background: var(--mainGradient-color);
   bottom: -0.2rem;
   left: 50%;
   border-radius: 50px;
@@ -104,7 +112,7 @@ body {
   font-size: 6.2rem;
 }
 .header-text span {
-  color: var(--primary-text);
+  color: var(--main-color);
 }
 
 /** ------------------------- NAVIGATION-END ------------------------- */
@@ -113,9 +121,10 @@ body {
 
 #about {
   background-color: var(--secondary-background);
-  padding: 4rem 0;
+  /* background-color: red; */
+  padding: 8rem;
   color: var(--primary-text);
-  height: 70rem;
+  height: 77rem;
 }
 #about h1 {
   font-size: 6.2rem;
@@ -180,8 +189,8 @@ body {
 /** ------------------------- SKILL-START ------------------------- */
 
 #skills {
-  background-color: var(--third-background);
-  padding: 4rem 0 8rem 0;
+  /* background-color: yellow; */
+  padding: 4rem 0 10rem 0;
   color: var(--primary-text);
 }
 #skills h1 {
@@ -316,7 +325,8 @@ body {
 /** ------------------------- EXPERIENCE-START ------------------------- */
 #experience {
   background-color: var(--secondary-background);
-  padding: 4rem 0;
+  /* background-color: yellowgreen; */
+  padding: 8rem 0;
   color: var(--primary-text);
 }
 
@@ -377,6 +387,7 @@ body {
   padding-left: 6rem;
   overflow: hidden;
   overflow-y: scroll;
+  /* scrollbar-width:thin; */
   height: 48rem;
 
   & h4 {
@@ -394,6 +405,18 @@ body {
     margin-top: 0.5rem;
     font-size: 1.6rem;
   }
+}
+.about-internship::-webkit-scrollbar {
+  width: 0.3rem;
+}
+.about-internship::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+.about-internship::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 20px;
+  border: none;
+  background-clip: content-box;
 }
 
 .internship-details {
@@ -428,6 +451,74 @@ body {
 }
 
 /** ------------------------- EXPERIENCE-END ------------------------- */
+
+/** ------------------------- PROJECT-START ------------------------- */
+#project {
+  background-color: var(--secondary-background);
+  /* background-color: orange; */
+  padding: 4rem 0;
+  color: var(--primary-text);
+}
+
+#project h1 {
+  font-size: 6.2rem;
+  text-align: center;
+  letter-spacing: 0.4rem;
+}
+.project-container {
+  margin: 0 auto;
+  width: 110rem;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+.box {
+  display: flex;
+  justify-content: space-between;
+}
+.detail-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-basis: 50%;
+
+  & h2 {
+    font-size: 3.6rem;
+  }
+
+  & p {
+    width: 50rem;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    letter-spacing: 0.2rem;
+  }
+  & .project-svg {
+    width: 4rem;
+    height: 4rem;
+  }
+  & .buttons {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.img-section {
+  flex-basis: 40%;
+}
+.img-section img {
+  width: 50rem;
+  height: 32rem;
+  border-radius: 15px;
+}
+.project-button {
+  text-align: center;
+}
+.additional-box {
+  display: none;
+}
+/** ------------------------- PROJECT-END ------------------------- */
+
 /** ------------------------- CONTACT-START ------------------------- */
 #contact {
   background-color: var(--third-background);
@@ -468,7 +559,8 @@ body {
 }
 .social-icons a:hover {
   color: #007bff;
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */
+  transform: scale(1.1);
 }
 
 form input,
@@ -487,9 +579,13 @@ form textarea {
   /* width: 100%; */
   text-align: center;
   background-color: #007bff;
-  padding: 2.5rem 0;
+  padding: 2rem 0;
   font-weight: 300;
   margin-top: 8rem;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+}
+#message {
+  color: #007bff;
 }
 /** ------------------------- CONTACT-END ------------------------- */

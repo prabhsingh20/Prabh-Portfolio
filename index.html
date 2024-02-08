@@ -18,14 +18,12 @@
         <nav class="main-nav">
           <h1 class="my-name">Prabhjot</h1>
           <ul class="main-nav-list">
-            <li><a class="main-nav-link" href="#">Home</a></li>
-            <li><a class="main-nav-link" href="#">About</a></li>
-            <li><a class="main-nav-link" href="#">Skills</a></li>
-            <li><a class="main-nav-link" href="#">Experience</a></li>
-            <li><a class="main-nav-link" href="#">Education</a></li>
-            <li><a class="main-nav-link" href="#">Services</a></li>
-            <!-- <li><a class="main-nav-link" href="#">Portfolio</a></li> -->
-            <li><a class="main-nav-link" href="#">Contact</a></li>
+            <li><a class="main-nav-link" href="#about">About</a></li>
+            <li><a class="main-nav-link" href="#skills">Skills</a></li>
+            <li><a class="main-nav-link" href="#experience">Experience</a></li>
+            <li><a class="main-nav-link" href="#experience">Education</a></li>
+            <li><a class="main-nav-link" href="#project">Projects</a></li>
+            <li><a class="main-nav-link" href="#contact">Contact</a></li>
           </ul>
         </nav>
         <div class="header-text">
@@ -96,7 +94,7 @@
     <!--^ ------------------------- ABOUT-SECTION-END -------------------------  -->
 
     <!--^ ------------------------- SKILL-SECTION-START -------------------------  -->
-    <section id="skills">
+     <section id="skills">
       <h1>Skills</h1>
       <div class="skill-container">
         <div class="timeline">
@@ -293,20 +291,17 @@
             </svg>
           </div>
         </div>
-        <div class="content" id="content-8">
-          <!-- Content will be displayed here -->8
-        </div>
+        <div class="content" id="content-8">8</div>
       </div>
-    </section>
+    </section> 
     <!--^ ------------------------- SKILL-SECTION-END -------------------------  -->
 
     <!--^ ------------------------- EXPERIENCE-SECTION-START -------------------------  -->
-    <section id="experience">
+     <section id="experience">
       <h1>Experience / Education</h1>
       <div class="experience-container">
         <div class="experience-box">
           <div id="frontend-developer" class="internship-heading active">
-            <!-- <img src="img/brand.jpg" alt="Baoiam logo" /> -->
             <h2>
               Frontend<br />
               Developer
@@ -357,8 +352,86 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> 
     <!--^ ------------------------- EXPERIENCE-SECTION-END -------------------------  -->
+
+    <!--^ ------------------------- PROJECT-SECTION-START -------------------------  -->
+    <section id="project">
+      <h1>Projects</h1>
+      <div class="project-container">
+        <div class="box">
+          <div class="detail-section">
+            <div>
+              <h2>Fit-N-Fine</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Laudantium voluptates aut pariatur hic atque facere laboriosam
+                doloremque nihil corrupti quis!
+              </p>
+            </div>
+
+            <div>
+              <svg
+                class="project-svg"
+                viewBox="0 0 384 512"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 32L34.9 427.8L191.5 480L349.1 427.8L384 32H0ZM308.2 159.9H124.4L128.5 209.3H304.1L290.5 357.7L192.6 384.7V385H191.5L92.8 357.7L86.8 281.9H134.5L138 320L191.5 334.5L245.2 320L251.2 257.8H84.3L71.5 112.2H312.6L308.2 159.9Z"
+                  fill="#AED6DC"
+                ></path>
+              </svg>
+              <div class="buttons">
+                <button class="btn">Code</button
+                ><button class="btn">live</button>
+              </div>
+            </div>
+          </div>
+          <div class="img-section">
+            <img src="img/background-img.jpg" alt="project image" />
+          </div>
+        </div>
+
+        <div class="box additional-box">
+          <div class="detail-section">
+            <div>
+              <h2>Fit-N-Fine</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Laudantium voluptates aut pariatur hic atque facere laboriosam
+                doloremque nihil corrupti quis!
+              </p>
+            </div>
+            <div>
+              <svg
+                class="project-svg"
+                viewBox="0 0 384 512"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 32L34.9 427.8L191.5 480L349.1 427.8L384 32H0ZM308.2 159.9H124.4L128.5 209.3H304.1L290.5 357.7L192.6 384.7V385H191.5L92.8 357.7L86.8 281.9H134.5L138 320L191.5 334.5L245.2 320L251.2 257.8H84.3L71.5 112.2H312.6L308.2 159.9Z"
+                  fill="#AED6DC"
+                ></path>
+              </svg>
+              <div class="buttons">
+                <button class="btn">Code</button
+                ><button class="btn">live</button>
+              </div>
+            </div>
+          </div>
+          <div class="img-section">
+            <img src="img/background-img.jpg" alt="project image" />
+          </div>
+        </div>
+      </div>
+      <div class="project-button">
+        <button class="btn show-more-btn">Show More</button>
+      </div>
+    </section>
+    <!--^ ------------------------- PROJECT-SECTION-END -------------------------  -->
+
     <!--^ ------------------------- CONTACT-SECTION-START -------------------------  -->
     <footer id="contact">
       <div class="contact-container">
@@ -383,11 +456,11 @@
             >
           </div>
           <div class="contact-right">
-            <form action="">
+            <form name="submit-to-google-sheet">
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
-                name="email"
+                name="Email"
                 placeholder="Your Email"
                 required
               />
@@ -398,6 +471,7 @@
               ></textarea>
               <button type="submit" class="btn">Submit</button>
             </form>
+            <span id="message"></span>
           </div>
         </div>
       </div>

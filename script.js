@@ -1,3 +1,5 @@
+//! -------------------- FOR SKILLS TIMELINE --------------------
+
 window.onload = function () {
   // Show content for the first item by default
   showContent(1);
@@ -5,7 +7,7 @@ window.onload = function () {
 
 function showContent(index) {
   // Get all timeline items
-  var items = document.querySelectorAll(".timeline-item");
+  let items = document.querySelectorAll(".timeline-item");
 
   // Remove 'active' class from all items
   items.forEach((item) => {
@@ -16,37 +18,19 @@ function showContent(index) {
   items[index - 1].classList.add("active");
 
   // Hide all content divs
-  var allContent = document.querySelectorAll(".content");
+  let allContent = document.querySelectorAll(".content");
   allContent.forEach(function (contentDiv) {
     contentDiv.style.display = "none";
   });
 
   // Show content based on itemId
-  var contentDiv = document.getElementById("content-" + index);
+  let contentDiv = document.getElementById("content-" + index);
   if (contentDiv) {
     contentDiv.style.display = "block";
   }
 }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const frontendDeveloper = document.getElementById("frontend-developer");
-//   const education = document.getElementById("education");
-//   const aboutInternship = document.getElementById("about-internship");
-//   const educationDetails = document.getElementById("education-details");
-
-//   frontendDeveloper.addEventListener("click", function () {
-//     aboutInternship.style.display = "block";
-//     educationDetails.style.display = "none";
-//   });
-
-//   education.addEventListener("click", function () {
-//     aboutInternship.style.display = "none";
-//     educationDetails.style.display = "block";
-//   });
-
-//   // Ensure education details are hidden initially
-//   educationDetails.style.display = "none";
-// });
+//! -------------------- FOR EXPERIENCE TAB --------------------
 
 document.addEventListener("DOMContentLoaded", function () {
   const frontendDeveloper = document.getElementById("frontend-developer");
@@ -94,9 +78,48 @@ document.addEventListener("DOMContentLoaded", function () {
   educationDetails.style.display = "none";
 });
 
+//! -------------------- FOR FOOTER YEAR --------------------
+
 function getCurrentYear() {
   const now = new Date();
   return now.getFullYear();
 }
 const yearSpan = document.getElementById("year");
 yearSpan.innerHTML = getCurrentYear();
+
+//! -------------------- FOR PROJECT --------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+  const showMoreButton = document.querySelector(".show-more-btn");
+  const additionalBoxes = document.querySelectorAll(".additional-box");
+
+  showMoreButton.addEventListener("click", function () {
+    additionalBoxes.forEach((box) => {
+      if (box.style.display === "none") {
+        box.style.display = "flex";
+        showMoreButton.textContent = "Show Less";
+      } else {
+        box.style.display = "none";
+        showMoreButton.textContent = "Show More";
+      }
+    });
+  });
+});
+
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbwrRmZYx8lsj0VTNbc9pOHj_4SsE_12SzWmUBKaSflAcWdlegSLDYaSBFalUQRIJ4Fs/exec";
+const form = document.forms["submit-to-google-sheet"];
+const message = document.getElementById("message");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      message.innerHTML = "Message Sent Successfully";
+      setTimeout(function () {
+        message.innerHTML = "";
+      }, 5000);
+      form.reset();
+    })
+    .catch((error) => console.error("Error!", error.message));
+});
