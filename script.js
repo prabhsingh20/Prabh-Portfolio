@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       education.classList.remove("active");
 
       // Toggle background color for active tab
-      frontendDeveloper.style.backgroundColor = "#007bff";
+      // frontendDeveloper.style.backgroundColor = "#007bff";
       education.style.backgroundColor = "";
     }
   });
@@ -65,14 +65,14 @@ document.addEventListener("DOMContentLoaded", function () {
       frontendDeveloper.classList.remove("active");
 
       // Toggle background color for active tab
-      education.style.backgroundColor = "#007bff";
+      // education.style.backgroundColor = "#007bff";
       frontendDeveloper.style.backgroundColor = "";
     }
   });
 
   // Ensure the default tab (Frontend Developer) has the active class and background color
   frontendDeveloper.classList.add("active");
-  frontendDeveloper.style.backgroundColor = "#007bff";
+  // frontendDeveloper.style.backgroundColor = "#007bff";
 
   // Ensure education details are hidden initially
   educationDetails.style.display = "none";
@@ -105,6 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+//! -------------------- FOR CONTACT FORM --------------------
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbwrRmZYx8lsj0VTNbc9pOHj_4SsE_12SzWmUBKaSflAcWdlegSLDYaSBFalUQRIJ4Fs/exec";

@@ -15,6 +15,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   background-color: var(--primary-background);
+  color: var(--primary-text);
   overflow-x: hidden;
 }
 :root {
@@ -22,9 +23,18 @@ body {
 
   --primary-text: #f0f0f0;
 
+  --primary-paragraph: #dfdede;
+
   --main-color: #009bd9;
 
-  --mainGradient-color: linear-gradient(30deg, #2c69d1, #0abcf9);
+  --mainGradient-color: linear-gradient(180deg, #2c69d1, #0abcf9);
+  --thirdGradient-color: linear-gradient(30deg, #2c69d1, #0abcf9);
+  --secondaryGradient-color: linear-gradient(
+    90deg,
+    rgb(0, 155, 217, 0) 0%,
+    rgb(0, 155, 217, 0.38) 89.06%,
+    rgb(0, 155, 217, 0.51) 100%
+  );
 
   /* --secondary-background: #1a1a1a; */
   /* --secondary-background: #171717; */
@@ -48,7 +58,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: var(--primary-text);
 }
 
 .main-nav h1 {
@@ -73,7 +82,7 @@ body {
   transition: 0.5s ease;
 
   &:hover {
-    color: var(--primary-text);
+    color: var(--main-color);
   }
 }
 
@@ -82,7 +91,6 @@ body {
   position: absolute;
   width: 0;
   height: 3px;
-  /* background: linear-gradient(30deg, #00ccff, #d500f9); */
   background: var(--mainGradient-color);
   bottom: -0.2rem;
   left: 50%;
@@ -103,7 +111,6 @@ body {
 }
 
 .header-text {
-  color: var(--primary-text);
   margin-top: 25rem;
   font-size: 3rem;
 }
@@ -112,7 +119,10 @@ body {
   font-size: 6.2rem;
 }
 .header-text span {
-  color: var(--main-color);
+  background: var(--mainGradient-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /** ------------------------- NAVIGATION-END ------------------------- */
@@ -120,16 +130,27 @@ body {
 /** ------------------------- ABOUT-START ------------------------- */
 
 #about {
-  background-color: var(--secondary-background);
-  /* background-color: red; */
   padding: 8rem;
-  color: var(--primary-text);
   height: 77rem;
 }
 #about h1 {
+  position: relative;
   font-size: 6.2rem;
   text-align: center;
   letter-spacing: 0.4rem;
+  background: var(--mainGradient-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heading-bottom {
+  position: absolute;
+  width: 12rem;
+  height: 0.5rem;
+  bottom: 0.5rem;
+  left: 45%;
+  background: var(--mainGradient-color);
+  border-radius: 15px;
 }
 .row {
   margin: 0 auto;
@@ -153,6 +174,7 @@ body {
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 0.2rem;
+  color: var(--primary-paragraph);
 }
 .about-col-2 {
   display: grid;
@@ -172,35 +194,57 @@ body {
 
   & p {
     font-size: 1.8rem;
+    color: var(--primary-paragraph);
   }
 }
 
 .btn {
-  margin-top: 2.5rem;
+  color: var(--primary-text);
+  background: var(--mainGradient-color);
   padding: 1.5rem 3rem;
   border: none;
-  border-radius: 20px;
+  border-radius: 15px;
   font-weight: 700;
   font-size: 2rem;
   cursor: pointer;
+  letter-spacing: 0.1rem;
+  transition: transform 0.1s linear;
+
+  &:active {
+    transform: scale(0.85);
+  }
 }
 /** ------------------------- ABOUT-END ------------------------- */
 
 /** ------------------------- SKILL-START ------------------------- */
 
 #skills {
-  /* background-color: yellow; */
   padding: 4rem 0 10rem 0;
-  color: var(--primary-text);
 }
 #skills h1 {
+  position: relative;
   font-size: 6.2rem;
   text-align: center;
   letter-spacing: 0.4rem;
 }
+.skills-bottom {
+  position: absolute;
+  width: 9rem;
+  height: 0.5rem;
+  bottom: 0.5rem;
+  left: 47%;
+  background: var(--mainGradient-color);
+  border-radius: 15px;
+}
+.slash {
+  background: var(--mainGradient-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .skill-container {
   margin: 0 auto;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
   gap: 4rem;
@@ -229,7 +273,7 @@ body {
   top: 0;
   width: 12px;
   height: 12px;
-  background-color: #ccc;
+  background-color: var(--primary-text);
   border-radius: 50%;
 }
 
@@ -240,7 +284,7 @@ body {
   top: 22px; /* Adjust this value to align the line with the center of the dot */
   bottom: 0;
   width: 2px;
-  background-color: #ccc;
+  background-color: var(--primary-text);
   padding: 20px 0;
 }
 
@@ -249,11 +293,11 @@ body {
 }
 
 .timeline-item.active::before {
-  background-color: #007bff;
+  background-color: var(--main-color);
 }
 
 .timeline-item.active {
-  color: #007bff;
+  color: var(--main-color);
 }
 
 .timeline-item.left {
@@ -269,6 +313,7 @@ body {
 .timeline-item.left::after {
   top: 2.8rem;
   left: 8.5rem;
+  background: var(--mainGradient-color);
   /* Adjust this value to position the line */
 }
 
@@ -286,14 +331,14 @@ body {
 .timeline-item.opposite-side::after {
   top: 2.8rem;
   left: -2.5rem;
+  background: var(--mainGradient-color);
   /* Adjust this value to position the line */
 }
 .content {
   width: 75rem;
   padding: 5rem 6rem;
   border-radius: 15px;
-  box-shadow: 3px 3px 29px 0px #007bff4b;
-  /* box-shadow: 3px 3px 29px 0px rgba(255, 154, 141, 0.25); */
+  box-shadow: 3px 3px 29px 0px var(--main-color);
 
   & h2 {
     font-size: 3.6rem;
@@ -303,7 +348,7 @@ body {
     font-size: 1.8rem;
     letter-spacing: 0.2rem;
     margin-top: 1rem;
-
+    color: var(--primary-paragraph);
     line-height: 2.6rem;
   }
 }
@@ -324,16 +369,34 @@ body {
 
 /** ------------------------- EXPERIENCE-START ------------------------- */
 #experience {
-  background-color: var(--secondary-background);
-  /* background-color: yellowgreen; */
   padding: 8rem 0;
-  color: var(--primary-text);
 }
-
+#experience .active {
+  background: var(--secondaryGradient-color);
+}
 #experience h1 {
+  position: relative;
   font-size: 6.2rem;
   text-align: center;
   letter-spacing: 0.4rem;
+}
+.experience-bottom-one {
+  position: absolute;
+  width: 15rem;
+  height: 0.5rem;
+  bottom: 0;
+  left: 33%;
+  background: var(--mainGradient-color);
+  border-radius: 15px;
+}
+.experience-bottom-two {
+  position: absolute;
+  width: 15rem;
+  height: 0.5rem;
+  bottom: 0.5rem;
+  right: 33%;
+  background: var(--mainGradient-color);
+  border-radius: 15px;
 }
 
 .experience-container {
@@ -369,7 +432,7 @@ body {
   & p {
     font-size: 1.6rem;
     letter-spacing: 0.2rem;
-    padding-bottom: 3rem;
+    color: var(--primary-paragraph);
   }
 }
 
@@ -387,7 +450,7 @@ body {
   padding-left: 6rem;
   overflow: hidden;
   overflow-y: scroll;
-  /* scrollbar-width:thin; */
+  scrollbar-width: none;
   height: 48rem;
 
   & h4 {
@@ -404,20 +467,21 @@ body {
   & p {
     margin-top: 0.5rem;
     font-size: 1.6rem;
+    color: var(--primary-paragraph);
   }
 }
-.about-internship::-webkit-scrollbar {
+/* .about-internship::-webkit-scrollbar {
   width: 0.3rem;
 }
 .about-internship::-webkit-scrollbar-track {
-  background-color: #fff;
+  background-color: var(--primary-text);
 }
 .about-internship::-webkit-scrollbar-thumb {
-  background-color: #007bff;
+  background-color: var(--main-color);
   border-radius: 20px;
   border: none;
   background-clip: content-box;
-}
+} */
 
 .internship-details {
   margin-top: 1.8rem;
@@ -454,16 +518,23 @@ body {
 
 /** ------------------------- PROJECT-START ------------------------- */
 #project {
-  background-color: var(--secondary-background);
-  /* background-color: orange; */
   padding: 4rem 0;
-  color: var(--primary-text);
 }
 
 #project h1 {
+  position: relative;
   font-size: 6.2rem;
   text-align: center;
   letter-spacing: 0.4rem;
+}
+.project-bottom {
+  position: absolute;
+  width: 12rem;
+  height: 0.5rem;
+  bottom: -0.5rem;
+  left: 46%;
+  background: var(--mainGradient-color);
+  border-radius: 15px;
 }
 .project-container {
   margin: 0 auto;
@@ -492,6 +563,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.2;
     letter-spacing: 0.2rem;
+    color: var(--primary-paragraph);
   }
   & .project-svg {
     width: 4rem;
@@ -521,13 +593,21 @@ body {
 
 /** ------------------------- CONTACT-START ------------------------- */
 #contact {
-  background-color: var(--third-background);
   padding-top: 4rem;
-  color: var(--primary-text);
 }
 #contact h1 {
+  position: relative;
   font-size: 4.4rem;
   letter-spacing: 0.4rem;
+}
+.contact-bottom {
+  position: absolute;
+  width: 15rem;
+  height: 0.5rem;
+  bottom: -0.5rem;
+  left: 15%;
+  background: var(--mainGradient-color);
+  border-radius: 15px;
 }
 .contact-left {
   flex-basis: 35%;
@@ -538,9 +618,10 @@ body {
 .contact-left p {
   margin-top: 3rem;
   font-size: 2rem;
+  color: var(--primary-paragraph);
 
   & i {
-    color: #007bff;
+    color: var(--main-color);
     margin-right: 1.5rem;
     font-size: 2.5rem;
   }
@@ -558,8 +639,7 @@ body {
   }
 }
 .social-icons a:hover {
-  color: #007bff;
-  /* transform: translateY(-5px); */
+  color: var(--main-color);
   transform: scale(1.1);
 }
 
@@ -571,14 +651,13 @@ form textarea {
   background: #262626;
   padding: 1.5rem;
   margin: 1.5rem 0;
-  color: #fff;
+  color: var(--primary-text);
   font-size: 1.8rem;
   border-radius: 0.6rem;
 }
 .copyright {
-  /* width: 100%; */
   text-align: center;
-  background-color: #007bff;
+  background-color: var(--main-color);
   padding: 2rem 0;
   font-weight: 300;
   margin-top: 8rem;
@@ -586,6 +665,6 @@ form textarea {
   letter-spacing: 0.2rem;
 }
 #message {
-  color: #007bff;
+  color: var(--main-color);
 }
 /** ------------------------- CONTACT-END ------------------------- */
