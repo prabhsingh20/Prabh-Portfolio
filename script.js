@@ -95,7 +95,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   showMoreButton.addEventListener("click", function () {
     additionalBoxes.forEach((box) => {
-      if (box.style.display === "none") {
+      var computedStyle = window.getComputedStyle(box);
+      if (computedStyle.display === "none") {
         box.style.display = "flex";
         showMoreButton.textContent = "Show Less";
       } else {
@@ -125,3 +126,57 @@ form.addEventListener("submit", (e) => {
     })
     .catch((error) => console.error("Error!", error.message));
 });
+
+//! -------------------- FOR ABOUT US BUTTON SHAKE --------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.querySelector(".btn-1");
+
+  function addDelay() {
+    btn.style.animationDelay = "4s"; // Set delay to 4s after first iteration
+  }
+
+  function removeAnimation() {
+    btn.style.animation = "none"; // Remove animation after it completes
+    setTimeout(function () {
+      btn.style.animation = "shake 1s infinite"; // Add animation after a delay
+    }, 4000); // Delay for 4 seconds
+  }
+
+  function stopAnimation() {
+    btn.style.animation = "none"; // Stop animation when hovering
+  }
+
+  function restartAnimation() {
+    btn.style.animation = "shake 1s infinite"; // Restart animation when not hovering
+  }
+
+  // Add delay after the first iteration
+  btn.addEventListener("animationiteration", addDelay);
+
+  // Remove animation after it completes and add it back after a delay
+  btn.addEventListener("animationend", removeAnimation);
+
+  // Stop animation when hovering
+  btn.addEventListener("mouseover", stopAnimation);
+
+  // Restart animation when not hovering
+  btn.addEventListener("mouseout", restartAnimation);
+});
+
+//! -------------------- FOR CELEBRATION ANIMATION --------------------
+
+
+document
+  .getElementsByClassName("confetti-button")[0]
+  .addEventListener("click", () => {
+    // confetti();
+    let canvas = document.createElement("canvas");
+    canvas.width = 600;
+    canvas.height = 600;
+    let container = document.getElementsByClassName("button-wrapper")[0];
+    container.appendChild(canvas);
+
+    let confetti_button = confetti.create(canvas);
+    confetti_button().then(() => container.removeChild(canvas));
+  });
