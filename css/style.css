@@ -19,14 +19,20 @@ body {
   overflow-x: hidden;
 }
 :root {
+  /** BACKGROUND */
   --primary-background: #111111;
+  --secondary-background: #1a1a1a;
 
+  /** TEXT */
   --primary-text: #f0f0f0;
 
+  /** PARAGRAPH */
   --primary-paragraph: #dfdede;
 
+  /** MAIN COLOR*/
   --main-color: #009bd9;
 
+  /** GRADIENT */
   --mainGradient-color: linear-gradient(180deg, #2c69d1, #0abcf9);
   --thirdGradient-color: linear-gradient(30deg, #2c69d1, #0abcf9);
   --secondaryGradient-color: linear-gradient(
@@ -36,20 +42,61 @@ body {
     rgb(0, 155, 217, 0.51) 100%
   );
 
-  --secondary-background: #1a1a1a;
   /* --secondary-background: #171717; */
 }
 
+.bg {
+  position: absolute;
+  height: 82rem;
+  width: 100%;
+  overflow: hidden;
+}
+.bubbles {
+  position: relative;
+  display: flex;
+  filter: blur(0.3rem);
+}
+.bubbles span {
+  position: relative;
+  min-width: 30px;
+  height: 30px;
+  background: #4fc3dc;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 10px #4fc3dc;
+  margin: 0 4px;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(75s / var(--i));
+}
+.bubbles span:nth-child(even) {
+  background: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d75, 0 0 50px #ff2d75, 0 10px #ff2d75;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(-10vh) scale(0);
+  }
+  100% {
+    transform: translateY(100vh) scale(1);
+  }
+}
+/* @keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+} */
 /** ------------------------- NAVIGATION-START ------------------------- */
 
 #header {
   height: 82rem;
 }
-.svg-ani {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  opacity: 0.4;
+.logo-name {
+  background: var(--mainGradient-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .container {
   padding: 1rem 15rem;
@@ -111,20 +158,35 @@ body {
 }
 
 .header-text {
-  margin-top: 25rem;
+  margin-top: 20rem;
   font-size: 3rem;
 }
 .header-text h2 {
   margin-top: 2rem;
   font-size: 6.2rem;
 }
-.header-text span {
+.header-text .my-name {
   background: var(--mainGradient-color);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
+.blink {
+  color: var(--main-color);
+  animation: blink 1s infinite;
+}
 /** ------------------------- NAVIGATION-END ------------------------- */
 
 /** ------------------------- ABOUT-START ------------------------- */
@@ -132,6 +194,7 @@ body {
 #about {
   padding: 8rem;
   height: 77rem;
+  background-color: var(--secondary-background);
 }
 #about h1 {
   position: relative;
@@ -162,7 +225,7 @@ body {
 }
 .about-col-1 {
   width: 80rem;
-  border-right: 1px solid var(--primary-text);
+  border-right: 1px solid var(--main-color);
   padding: 0 4rem;
 }
 .about-col-1 h4 {
@@ -205,7 +268,7 @@ body {
   background: none;
   padding: 2rem 4rem;
   border: 2px solid var(--main-color);
-  border-radius: 15px;
+  border-radius: 20px;
   font-weight: 700;
   font-size: 2rem;
   cursor: pointer;
@@ -223,15 +286,11 @@ body {
 }
 .btn-1 {
   margin-top: 4rem;
-  /* animation: shake 0.5s linear 3 1s;
-   */
   animation: shake 1s infinite;
-  /* animation: shake 1s 2s; */
 }
 .shake-slow {
   animation-delay: 4s;
 }
-/* Add a class to stop animation */
 
 @keyframes shake {
   0%,
@@ -405,6 +464,7 @@ body {
 /** ------------------------- EXPERIENCE-START ------------------------- */
 #experience {
   padding: 8rem 0;
+  background-color: var(--secondary-background);
 }
 #experience .active {
   background: var(--secondaryGradient-color);
@@ -558,7 +618,6 @@ body {
 /** ------------------------- PROJECT-START ------------------------- */
 #project {
   padding: 4rem 0;
-  background-color: var(--secondary-background);
 }
 
 #project h1 {
@@ -664,6 +723,7 @@ body {
 /** ------------------------- CONTACT-START ------------------------- */
 #contact {
   padding-top: 4rem;
+  background-color: var(--secondary-background);
 }
 #contact h1 {
   position: relative;
@@ -678,7 +738,7 @@ body {
   position: absolute;
   width: 15rem;
   height: 0.5rem;
-  bottom: -0.5rem;
+  bottom: 0;
   left: 15%;
   background: var(--mainGradient-color);
   border-radius: 15px;
@@ -741,6 +801,12 @@ form textarea {
 }
 #message {
   color: var(--main-color);
+  font-size: 2rem;
+  display: inline-block;
+  margin: 0.5rem;
+}
+.tick {
+  color: rgb(3, 173, 3);
 }
 
 .btn-5 {

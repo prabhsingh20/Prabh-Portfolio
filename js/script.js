@@ -118,7 +118,8 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
-      message.innerHTML = "Message Sent Successfully";
+      message.innerHTML =
+        "Message Sent Successfully <span class='tick'>✔</span>";
       setTimeout(function () {
         message.innerHTML = "";
       }, 5000);
@@ -165,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //! -------------------- FOR CELEBRATION ANIMATION --------------------
-
 
 document
   .getElementsByClassName("confetti-button")[0]
