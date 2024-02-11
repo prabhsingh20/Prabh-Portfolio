@@ -59,7 +59,7 @@
     </div>
     <!--^ ------------------------- HEADER-SECTION-START -------------------------  -->
     <header id="header">
-      <div class="container">
+      <div class="header-container">
         <nav class="main-nav">
           <h1>Pr<span class="logo-name">ab</span>h</h1>
           <ul class="main-nav-list">
@@ -74,24 +74,24 @@
         <div class="header-text">
           <p># Front-end Developer</p>
           <h2>
-            Hi, I'm <br /><span class="my-name">Prabhjot</span>
+            Hello,<br />
+            I'm <span class="my-name">Prabhjot</span>
             Singh
           </h2>
           <p>
-            What i do <span class="blink">? ?</span> <br> I love to create bugs that
-            are unsolvable;
+            What i do <span class="blink">? ?</span> <br />
+            I love to create bugs that are unsolvable;
           </p>
         </div>
       </div>
     </header>
-    <!--^ ------------------------- HEADER-SECTION-END -------------------------  -->
 
     <!--^ ------------------------- ABOUT-SECTION-START -------------------------  -->
     <section id="about">
-      <div class="container">
-        <h1>About Me<span class="heading-bottom"></span></h1>
+      <div class="about-container">
+        <h1 class="h-one">About Me<span class="heading-bottom"></span></h1>
 
-        <div class="row">
+        <div class="about-row">
           <div class="about-col-1">
             <h4>Hello, I'm <strong>Prabhjot</strong>👋</h4>
             <p>
@@ -140,11 +140,10 @@
         </div>
       </div>
     </section>
-    <!--^ ------------------------- ABOUT-SECTION-END -------------------------  -->
 
     <!--^ ------------------------- SKILL-SECTION-START -------------------------  -->
     <section id="skills">
-      <h1>Skills<span class="skills-bottom"></span></h1>
+      <h1 class="h-one">Skills<span class="skills-bottom"></span></h1>
       <div class="skill-container">
         <div class="timeline">
           <div class="timeline-item opposite-side" onclick="showContent(1)">
@@ -373,12 +372,12 @@
         </div>
       </div>
     </section>
-    <!--^ ------------------------- SKILL-SECTION-END -------------------------  -->
 
     <!--^ ------------------------- EXPERIENCE-SECTION-START -------------------------  -->
     <section id="experience">
-      <h1>
-        Experience <span class="slash">/</span> Education
+      <h1 class="h-one">
+        Experience <span class="slash">/</span>
+        Education
         <span class="experience-bottom-one"></span>
         <span class="experience-bottom-two"></span>
       </h1>
@@ -432,15 +431,41 @@
           </div>
           <div class="education-details" id="education-details">
             <h2>Education</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Doloremque repudiandae rerum autem vero est aspernatur consequatur
+              non nam voluptas dignissimos iusto voluptates quam praesentium
+              similique quisquam molestias alias, pariatur inventore esse
+              voluptatem maxime! Illo, vitae. Quam blanditiis doloremque nobis
+              vel laudantium consequuntur aliquam aut ullam rem repellat quo
+              voluptates veritatis nesciunt perspiciatis officia provident
+              voluptatum recusandae fuga reprehenderit, voluptatem numquam
+              delectus, dolore assumenda. Harum consectetur culpa saepe nesciunt
+              laborum! Eius inventore tempore ducimus ullam pariatur facilis
+              suscipit quod quis. Nihil fugiat consequatur expedita nostrum,
+              reiciendis, voluptates voluptas earum, aperiam libero doloribus
+              perspiciatis aut amet dolor esse ipsam vel quisquam id! Lorem
+              ipsum, dolor sit amet consectetur adipisicing elit. Dolorem odit
+              quibusdam, delectus ratione iure ab ipsa nesciunt accusamus odio
+              molestias id ut aliquid eum nemo rem? Aspernatur dolorum
+              distinctio iusto? Ratione, voluptas provident. Tempore assumenda
+              quasi quo, ratione repellendus minus laudantium vero excepturi
+              eveniet et, quibusdam, quia consectetur nam error optio
+              perferendis voluptas voluptatibus corrupti sed aperiam a animi
+              culpa dolores architecto? Aliquid accusantium ducimus qui delectus
+              officiis, quos sint saepe? Odit placeat, deleniti dolor
+              repudiandae nisi at beatae provident animi iste alias? Quibusdam
+              nam a ducimus iusto unde mollitia, earum eos aliquid, facilis iste
+              inventore voluptatum odio sapiente porro!
+            </p>
           </div>
         </div>
       </div>
     </section>
-    <!--^ ------------------------- EXPERIENCE-SECTION-END -------------------------  -->
 
     <!--^ ------------------------- PROJECT-SECTION-START -------------------------  -->
     <section id="project">
-      <h1>
+      <h1 class="h-one">
         Projects
         <span class="project-bottom"></span>
       </h1>
@@ -941,14 +966,13 @@
         <button class="btn show-more-btn btn-4">Show More</button>
       </div>
     </section>
-    <!--^ ------------------------- PROJECT-SECTION-END -------------------------  -->
 
     <!--^ ------------------------- CONTACT-SECTION-START -------------------------  -->
     <footer id="contact">
       <div class="contact-container">
-        <div class="row">
+        <div class="contact-row">
           <div class="contact-left">
-            <h1 class="sub-title">
+            <h1 class="sub-title h-one">
               Contact Me <span class="contact-bottom"></span>
             </h1>
             <p><i class="fa-solid fa-paper-plane"></i>singh20prabh@gmail.com</p>
@@ -984,8 +1008,9 @@
               <textarea
                 name="Message"
                 rows="6"
-                placeholder="Your Message"
+                placeholder="Your Message or Feedback"
               ></textarea>
+              <input type="submit" hidden />
               <button type="submit" class="btn">Submit</button>
             </form>
             <p id="message"></p>
@@ -996,7 +1021,6 @@
         <p>&#169;Copyrigth <span id="year"></span>-Prabhjot Singh</p>
       </div>
     </footer>
-    <!--^ ------------------------- CONTACT-SECTION-END -------------------------  -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   </body>
 </html>

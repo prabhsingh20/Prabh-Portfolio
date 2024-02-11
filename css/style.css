@@ -41,6 +41,12 @@ body {
     rgb(0, 155, 217, 0.38) 89.06%,
     rgb(0, 155, 217, 0.51) 100%
   );
+  --queryGradient-color: linear-gradient(
+    180deg,
+    rgb(0, 155, 217, 0) 0%,
+    rgb(0, 155, 217, 0.38) 89.06%,
+    rgb(0, 155, 217, 0.51) 100%
+  );
 
   /* --secondary-background: #171717; */
 }
@@ -58,20 +64,20 @@ body {
 }
 .bubbles span {
   position: relative;
-  min-width: 30px;
-  height: 30px;
+  min-width: 3rem;
+  height: 3rem;
   background: #4fc3dc;
   border-radius: 50%;
   box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 10px #4fc3dc;
   margin: 0 4px;
-  animation: animate 15s linear infinite;
+  animation: falling 15s linear infinite;
   animation-duration: calc(75s / var(--i));
 }
 .bubbles span:nth-child(even) {
   background: #ff2d75;
   box-shadow: 0 0 0 10px #ff2d75, 0 0 50px #ff2d75, 0 10px #ff2d75;
 }
-@keyframes animate {
+@keyframes falling {
   0% {
     transform: translateY(-10vh) scale(0);
   }
@@ -79,7 +85,7 @@ body {
     transform: translateY(100vh) scale(1);
   }
 }
-/* @keyframes animate {
+/* @keyframes falling {
   0% {
     transform: translateY(100vh) scale(0);
   }
@@ -98,7 +104,7 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.container {
+.header-container {
   padding: 1rem 15rem;
 }
 .main-nav {
@@ -188,15 +194,8 @@ body {
   animation: blink 1s infinite;
 }
 /** ------------------------- NAVIGATION-END ------------------------- */
-
-/** ------------------------- ABOUT-START ------------------------- */
-
-#about {
-  padding: 8rem;
-  height: 77rem;
-  background-color: var(--secondary-background);
-}
-#about h1 {
+/* REUSEABEL */
+.h-one {
   position: relative;
   font-size: 6.2rem;
   text-align: center;
@@ -206,6 +205,14 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/** ------------------------- ABOUT-START ------------------------- */
+
+#about {
+  padding: 8rem;
+  height: 77rem;
+  background-color: var(--secondary-background);
+}
+
 .heading-bottom {
   position: absolute;
   width: 12rem;
@@ -215,7 +222,7 @@ body {
   background: var(--mainGradient-color);
   border-radius: 15px;
 }
-.row {
+.about-row {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -311,16 +318,7 @@ body {
 #skills {
   padding: 4rem 0 10rem 0;
 }
-#skills h1 {
-  position: relative;
-  font-size: 6.2rem;
-  text-align: center;
-  letter-spacing: 0.4rem;
-  background: var(--mainGradient-color);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 .skills-bottom {
   position: absolute;
   width: 9rem;
@@ -469,16 +467,7 @@ body {
 #experience .active {
   background: var(--secondaryGradient-color);
 }
-#experience h1 {
-  position: relative;
-  font-size: 6.2rem;
-  text-align: center;
-  letter-spacing: 0.4rem;
-  background: var(--mainGradient-color);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 .experience-bottom-one {
   position: absolute;
   width: 15rem;
@@ -544,7 +533,8 @@ body {
   border-bottom: 1px solid var(--primary-text);
 }
 
-.about-internship {
+.about-internship,
+.education-details {
   width: 75rem;
   padding-left: 6rem;
   overflow: hidden;
@@ -569,18 +559,6 @@ body {
     color: var(--primary-paragraph);
   }
 }
-/* .about-internship::-webkit-scrollbar {
-  width: 0.3rem;
-}
-.about-internship::-webkit-scrollbar-track {
-  background-color: var(--primary-text);
-}
-.about-internship::-webkit-scrollbar-thumb {
-  background-color: var(--main-color);
-  border-radius: 20px;
-  border: none;
-  background-clip: content-box;
-} */
 
 .internship-details {
   margin-top: 1.8rem;
@@ -608,10 +586,7 @@ body {
   justify-content: center;
   height: 100%;
 }
-.education-details {
-  width: 75rem;
-  padding: 2rem 2rem 2rem 4rem;
-}
+
 
 /** ------------------------- EXPERIENCE-END ------------------------- */
 
@@ -621,14 +596,6 @@ body {
 }
 
 #project h1 {
-  position: relative;
-  font-size: 6.2rem;
-  text-align: center;
-  letter-spacing: 0.4rem;
-  background: var(--mainGradient-color);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin-bottom: 5rem;
 }
 .project-bottom {
@@ -726,13 +693,8 @@ body {
   background-color: var(--secondary-background);
 }
 #contact h1 {
-  position: relative;
   font-size: 4.4rem;
-  letter-spacing: 0.4rem;
-  background: var(--mainGradient-color);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  text-align: left;
 }
 .contact-bottom {
   position: absolute;
@@ -742,6 +704,14 @@ body {
   left: 15%;
   background: var(--mainGradient-color);
   border-radius: 15px;
+}
+.contact-row {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 130rem;
+  padding-top: 4rem;
 }
 .contact-left {
   flex-basis: 35%;
@@ -818,8 +788,8 @@ form textarea {
   /* display: flex;
   align-items: center;
   justify-content: center; */
-  /* width: 200px;
-  height: 60px; */
+  /* width: 20rem;
+  height: 6rem; */
 }
 
 .button-wrapper canvas {

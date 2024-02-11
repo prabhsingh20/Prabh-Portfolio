@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   showMoreButton.addEventListener("click", function () {
     additionalBoxes.forEach((box) => {
-      var computedStyle = window.getComputedStyle(box);
+      let computedStyle = window.getComputedStyle(box);
       if (computedStyle.display === "none") {
         box.style.display = "flex";
         showMoreButton.textContent = "Show Less";
