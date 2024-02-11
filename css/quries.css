@@ -1,20 +1,29 @@
 /* 1456px */
 @media (max-width: 91em) {
+  #about {
+    padding: 8rem 1rem;
+  }
   .about-row {
-    width: 110rem;
+    width: 120rem;
+  }
+  .project-container {
+    width: 120rem;
   }
   .contact-row {
     width: 110rem;
   }
 }
 
-/* 1270px */
+/* 1248px */
 @media (max-width: 78em) {
-  #about {
-    padding: 8rem 1rem;
+  .about-row {
+    width: 110rem;
   }
   .project-container {
     width: 105rem;
+  }
+  .box {
+    gap: 5rem;
   }
   .contact-row {
     width: 95rem;
@@ -23,11 +32,8 @@
 
 /* 1152px */
 @media (max-width: 72em) {
-  #about {
-    height: 90rem;
-  }
   .about-row {
-    width: 80rem;
+    width: 90rem;
     flex-direction: column;
   }
   .about-col-1 {
@@ -38,18 +44,23 @@
   .about-col-1 h4 {
     text-align: center;
     margin-bottom: 0.5rem;
+    margin-top: 0;
   }
   .about-col-2 {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
-    width: 80rem;
   }
-
+  .about-col-2-content {
+    gap: 1rem;
+  }
   /* SKILL */
+
   .skill-container {
     flex-direction: column;
     align-items: center;
     width: auto;
+    gap: 5rem;
+    height: auto;
   }
   .timeline {
     display: grid;
@@ -123,7 +134,7 @@
 
   .experience-container {
     flex-direction: column;
-    height: 80rem;
+    height: auto;
     width: auto;
   }
   .experience-box {
@@ -138,11 +149,7 @@
   .about-internship,
   .education-details {
     margin-top: 2rem;
-    padding-left: 2.5rem;
-
-    & p {
-      width: 70rem;
-    }
+    padding-left: 3rem;
   }
   .internship-heading {
     border-right: 1px solid var(--primary-text);
@@ -160,16 +167,11 @@
   .detail-section {
     width: 80rem;
     align-items: center;
-
-    & h2 {
-      text-align: center;
-    }
+    text-align: center;
 
     & p {
-      width: 70rem;
-      text-align: center;
+      padding: 0 4rem;
     }
-
     & .svg-container {
       justify-content: center;
     }
@@ -180,6 +182,73 @@
   /* FOOTER */
   .contact-row {
     flex-direction: column;
+    width: 80rem;
+    gap: 5rem;
+  }
+
+  .btn-5 {
+    margin-top: 2rem;
+  }
+  .contact-bottom {
+    left: 18%;
+  }
+}
+
+/* 944px */
+@media (max-width: 59em) {
+  /* ABOUT */
+  .about-row {
     width: 70rem;
+  }
+  .about-col-1 {
+    margin: 0 auto;
+    padding: 0 0 3rem 0;
+  }
+  .about-col-2 {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10rem;
+  }
+
+  /* SKILL*/
+
+  .content {
+    width: 65rem;
+
+    & p {
+      height: 20rem;
+      overflow: scroll;
+    }
+  }
+
+  /* EXPERIENCE */
+
+  .experience-box {
+    flex-direction: column;
+    width: 60rem;
+    height: 50rem;
+    border-bottom: none;
+  }
+  .internship-heading {
+    border-right: none;
+  }
+  .about-internship,
+  .education-details {
+    width: 65rem;
+  }
+
+  /* PROJECT */
+  .img-section img {
+    width: 65rem;
+  }
+  .detail-section {
+    width: 65rem;
+
+    & p {
+      padding: 0;
+    }
+  }
+/* CONTACT */
+  .contact-row {
+    width: 65rem;
   }
 }
