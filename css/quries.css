@@ -19,6 +19,9 @@
   .about-row {
     width: 110rem;
   }
+  .about-col-1 {
+    padding: 0 4rem;
+  }
   .project-container {
     width: 105rem;
   }
@@ -39,7 +42,7 @@
   .about-col-1 {
     border-right: none;
     border-bottom: 1px solid var(--main-color);
-    padding-bottom: 3rem;
+    padding: 0 4rem 3rem;
   }
   .about-col-1 h4 {
     text-align: center;
@@ -202,7 +205,7 @@
   }
   .about-col-1 {
     margin: 0 auto;
-    padding: 0 0 3rem 0;
+    padding: 0 3rem 3rem;
   }
   .about-col-2 {
     grid-template-columns: 1fr 1fr;
@@ -234,6 +237,10 @@
   .about-internship,
   .education-details {
     width: 65rem;
+    & ul {
+      width: auto;
+      padding-left: 0;
+    }
   }
 
   /* PROJECT */
@@ -247,8 +254,189 @@
       padding: 0;
     }
   }
-/* CONTACT */
+  /* CONTACT */
   .contact-row {
     width: 65rem;
+  }
+}
+
+/* 752px */
+@media (max-width: 47em) {
+  .header-text {
+    margin-top: 5rem;
+  }
+  .header-text h2 {
+    font-size: 2.2rem;
+  }
+  .about-row {
+    width: 55rem;
+  }
+  .about-col-1 {
+    padding: 0 0 3rem;
+  }
+  .about-col-2 {
+    padding: 0;
+    column-gap: 4rem;
+  }
+  .about-col-2-content {
+    gap: 0.5rem;
+  }
+  .timeline {
+    width: 50rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .timeline-item.opposite-side::before {
+    left: 3rem;
+  }
+  .timeline-item.left::before {
+    left: 3rem;
+  }
+  .content {
+    width: 50rem;
+  }
+  .experience-box {
+    width: 50rem;
+  }
+  .about-internship,
+  .education-details {
+    width: 55rem;
+  }
+  .detail-section {
+    width: 50rem;
+  }
+  .img-section img {
+    width: 50rem;
+    height: 25rem;
+  }
+  .contact-row {
+    width: 50rem;
+  }
+}
+
+/* 608px */
+@media (max-width: 38em) {
+  .about-row {
+    width: 45rem;
+  }
+  .about-col-2 {
+    gap: 1.5rem;
+  }
+  .about-col-2-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .about-col-2-content:nth-child(3) {
+    grid-area: 3 / span 2;
+  }
+  .content {
+    width: 45rem;
+  }
+  .experience-box {
+    width: 45rem;
+  }
+  .about-internship,
+  .education-details {
+    width: 45rem;
+  }
+  .detail-section {
+    width: 45rem;
+  }
+  .img-section img {
+    width: 45rem;
+  }
+  .contact-row {
+    width: 45rem;
+  }
+}
+
+/* 512px */
+@media (max-width: 32em) {
+  .about-row {
+    width: 40rem;
+  }
+  .about-col-1 {
+    padding: 0 3rem 3rem;
+  }
+  .about-col-1 p {
+    height: 40rem;
+    overflow: scroll;
+    margin-top: 2rem;
+  }
+  .about-col-2-content {
+    flex-direction: column;
+  }
+  .timeline {
+    grid-template-columns: repeat(2, 1fr);
+    width: 30rem;
+  }
+
+  .content {
+    width: 35rem;
+    padding: 2rem 3rem;
+  }
+  .experience-box {
+    width: 40rem;
+  }
+  .about-internship,
+  .education-details {
+    width: 40rem;
+    padding-left: 2rem;
+  }
+  .detail-section {
+    width: 42rem;
+
+    & .buttons {
+      flex-direction: column;
+      gap: 0;
+      align-items: center;
+    }
+  }
+  .img-section img {
+    width: 40rem;
+  }
+  .contact-row {
+    width: 40rem;
+  }
+}
+
+/* 432px */
+@media (max-width: 27em) {
+  .about-row {
+    width: 35rem;
+  }
+  .about-col-1 {
+    padding: 0 2rem 3rem;
+  }
+  .about-col-1 p {
+    font-size: 1.8rem;
+  }
+  .about-col-2 {
+    margin-left: 2rem;
+    gap: 3rem;
+  }
+  .about-col-2-content {
+    gap: 0;
+  }
+  .content {
+    width: 30rem;
+  }
+  .experience-box {
+    width: 30rem;
+  }
+  .about-internship,
+  .education-details {
+    width: 34rem;
+    padding-left: 2rem;
+  }
+  .detail-section {
+    width: 28rem;
+  }
+  .img-section img {
+    width: 30rem;
+    height: 20rem;
+  }
+  .contact-row {
+    width: 33rem;
   }
 }

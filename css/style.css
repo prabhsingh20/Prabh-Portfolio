@@ -61,6 +61,7 @@ body {
   position: relative;
   display: flex;
   filter: blur(0.3rem);
+  z-index: -1;
 }
 .bubbles span {
   position: relative;
@@ -232,7 +233,7 @@ body {
 }
 .about-col-1 {
   border-right: 1px solid var(--main-color);
-  padding: 0 4rem;
+  padding: 0 8rem;
 }
 .about-col-1 h4 {
   margin-top: 2rem;
