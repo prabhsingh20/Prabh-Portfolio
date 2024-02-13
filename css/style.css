@@ -56,12 +56,12 @@ body {
   height: 82rem;
   width: 100%;
   overflow: hidden;
+  z-index: -1;
 }
 .bubbles {
   position: relative;
   display: flex;
   filter: blur(0.3rem);
-  z-index: -1;
 }
 .bubbles span {
   position: relative;
@@ -105,13 +105,46 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.header-container {
-  padding: 1rem 15rem;
-}
+
 .main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.3rem 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1;
+}
+.main-nav::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
+  z-index: -1;
+}
+.main-nav::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(225, 225, 225, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+.main-nav:hover::after {
+  left: 100%;
 }
 
 .main-nav h1 {
@@ -122,6 +155,20 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+#check {
+  display: none;
+}
+.icons {
+  position: absolute;
+  right: 5%;
+  font-size: 2.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  background: var(--mainGradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .main-nav-link:link,
 .main-nav-link:visited {
@@ -486,12 +533,14 @@ body {
   width: 15rem;
   height: 0.5rem;
   bottom: 0.5rem;
-  right: 37%;
+  right: 38%;
   transform: translateX(50%);
   background: var(--mainGradient-color);
   border-radius: 15px;
 }
-
+.break {
+  display: none;
+}
 .experience-container {
   margin: 0 auto;
   display: flex;
@@ -544,7 +593,6 @@ body {
   padding-left: 6rem;
   overflow: hidden;
   overflow-y: scroll;
-  scrollbar-width: none;
   height: 48rem;
 
   & h4 {
@@ -703,7 +751,7 @@ body {
   width: 15rem;
   height: 0.5rem;
   bottom: 0;
-  left: 30%;
+  left: 34%;
   transform: translateX(-50%);
   background: var(--mainGradient-color);
   border-radius: 15px;

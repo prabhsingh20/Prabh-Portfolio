@@ -6,6 +6,10 @@
     <title>Prabh/Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/quries.css" />
+    <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
     <script
       src="https://kit.fontawesome.com/ab98375355.js"
       crossorigin="anonymous"
@@ -62,13 +66,18 @@
       <div class="header-container">
         <nav class="main-nav">
           <h1>Pr<span class="logo-name">ab</span>h</h1>
+          <input type="checkbox" id="check" />
+          <label for="check" class="icons">
+            <i class="bx bx-menu" id="menu-icon"></i>
+            <i class="bx bx-x" id="close-icon"></i>
+          </label>
           <ul class="main-nav-list">
-            <li><a class="main-nav-link" href="#about">About</a></li>
-            <li><a class="main-nav-link" href="#skills">Skills</a></li>
-            <li><a class="main-nav-link" href="#experience">Experience</a></li>
-            <li><a class="main-nav-link" href="#experience">Education</a></li>
-            <li><a class="main-nav-link" href="#project">Projects</a></li>
-            <li><a class="main-nav-link" href="#contact">Contact</a></li>
+            <li style="--i: 0"><a class="main-nav-link" href="#about">About</a></li>
+            <li style="--i: 1"><a class="main-nav-link" href="#skills">Skills</a></li>
+            <li style="--i: 2"><a class="main-nav-link" href="#experience">Experience</a></li>
+            <li style="--i: 3"><a class="main-nav-link" href="#experience">Education</a></li>
+            <li style="--i: 4"><a class="main-nav-link" href="#project">Projects</a></li>
+            <li style="--i: 5"><a class="main-nav-link" href="#contact">Contact</a></li>
           </ul>
         </nav>
         <div class="header-text">
@@ -376,7 +385,7 @@
     <!--^ ------------------------- EXPERIENCE-SECTION-START -------------------------  -->
     <section id="experience">
       <h1 class="h-one">
-        Experience <span class="slash">/</span>
+        Experience <span class="slash">/</span><br class="break" />
         Education
         <span class="experience-bottom-one"></span>
         <span class="experience-bottom-two"></span>
