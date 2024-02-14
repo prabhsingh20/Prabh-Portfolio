@@ -61,7 +61,7 @@ body {
 .bubbles {
   position: relative;
   display: flex;
-  filter: blur(0.3rem);
+  filter: blur(0.5rem);
 }
 .bubbles span {
   position: relative;
@@ -112,7 +112,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 2;
 }
 .main-nav::before {
   content: "";
@@ -246,7 +246,10 @@ body {
 }
 
 .blink {
-  color: var(--main-color);
+  background: var(--mainGradient-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   animation: blink 1s infinite;
 }
 .animation-section {
@@ -277,6 +280,7 @@ body {
   background: #fff;
   border-radius: 200px;
   filter: drop-shadow(0 0 35px #fff);
+  z-index: 1;
 }
 .cloud::before {
   content: "";
@@ -406,7 +410,7 @@ body {
   background: none;
   padding: 2rem 4rem;
   border: 2px solid var(--main-color);
-  border-radius: 20px;
+  border-radius: 15px;
   font-weight: 700;
   font-size: 2rem;
   cursor: pointer;
@@ -572,7 +576,7 @@ body {
     letter-spacing: 0.2rem;
     margin-top: 1rem;
     color: var(--primary-paragraph);
-    line-height: 2.6rem;
+    line-height: 1.7;
   }
 }
 .svg-center {
@@ -648,12 +652,13 @@ body {
     margin: 0 4rem 0 0;
     padding-left: 4rem;
     font-size: 5.2rem;
-    line-height: 6rem;
+    line-height: 1.2;
     cursor: pointer;
   }
 
   & p {
     font-size: 1.6rem;
+    margin-top: 0.5rem;
     letter-spacing: 0.2rem;
     color: var(--primary-paragraph);
   }
@@ -672,19 +677,13 @@ body {
 .education-details {
   width: 75rem;
   padding-left: 6rem;
-  overflow: hidden;
-  overflow-y: scroll;
-  height: 48rem;
 
-  & h4 {
-    font-size: 3.6rem;
-  }
   & h2 {
-    font-size: 2.4rem;
+    font-size: 3.6rem;
   }
 
   & h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   & p {
@@ -696,21 +695,24 @@ body {
 
 .internship-details {
   margin-top: 1.8rem;
+  height: 35rem;
+  overflow: scroll;
 
   & h4 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 600;
   }
 
   & ul {
+    list-style: square;
     width: 65rem;
     padding-left: 2.2rem;
   }
 
   & ul li {
-    margin-top: 0.4rem;
+    margin-top: 0.6rem;
     font-size: 1.6rem;
-    line-height: 2.5rem;
+    line-height: 1.6;
     letter-spacing: 0.1rem;
   }
 }
@@ -875,7 +877,11 @@ body {
   }
 }
 .social-icons a:hover {
-  color: var(--main-color);
+  /* color: var(--main-color); */
+  background: var(--mainGradient-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   transform: scale(1.1);
 }
 
@@ -893,7 +899,6 @@ form textarea {
 }
 .copyright {
   text-align: center;
-  /* background-color: var(--main-color); */
   background: var(--mainGradient-color);
   padding: 2rem 0;
   font-weight: 300;
