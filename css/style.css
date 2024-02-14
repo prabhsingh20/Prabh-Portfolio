@@ -96,9 +96,6 @@ body {
 } */
 /** ------------------------- NAVIGATION-START ------------------------- */
 
-#header {
-  height: 82rem;
-}
 .logo-name {
   background: var(--mainGradient-color);
   -webkit-background-clip: text;
@@ -163,11 +160,11 @@ body {
   position: absolute;
   right: 5%;
   font-size: 2.8rem;
-  color: #fff;
   cursor: pointer;
   display: none;
   background: var(--mainGradient-color);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .main-nav-link:link,
@@ -210,14 +207,25 @@ body {
     width: 0;
   }
 }
-
+.header-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  padding: 0 15rem;
+}
 .header-text {
-  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin-top: 25rem; */
   font-size: 3rem;
+}
+.tagline {
+  font-size: 2.8rem;
 }
 .header-text h2 {
   margin-top: 2rem;
-  font-size: 6.2rem;
+  font-size: 7.4rem;
 }
 .header-text .my-name {
   background: var(--mainGradient-color);
@@ -240,6 +248,79 @@ body {
 .blink {
   color: var(--main-color);
   animation: blink 1s infinite;
+}
+.animation-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 90rem;
+}
+.question {
+  top: 22rem;
+  font-size: 3rem;
+  position: absolute;
+}
+.container {
+  position: relative;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.cloud {
+  position: relative;
+  top: -5rem;
+  width: 35rem;
+  /* width: 32rem; */
+  height: 10rem;
+  background: #fff;
+  border-radius: 200px;
+  filter: drop-shadow(0 0 35px #fff);
+}
+.cloud::before {
+  content: "";
+  position: absolute;
+  top: -5rem;
+  left: 4rem;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 90px 0 0 30px #fff;
+}
+.cloud::after {
+  content: "";
+  position: absolute;
+  top: -4rem;
+  right: 12rem;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 90px 0 0 5px #fff;
+}
+.text {
+  position: absolute;
+  top: 4rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 30px #fff;
+  transform-origin: bottom;
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  70% {
+    transform: translateY(200px) scale(1);
+  }
+  100% {
+    transform: translateY(200px) scale(0);
+  }
 }
 /** ------------------------- NAVIGATION-END ------------------------- */
 /* REUSEABEL */

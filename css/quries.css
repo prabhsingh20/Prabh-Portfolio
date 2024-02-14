@@ -1,5 +1,8 @@
 /* 1456px */
 @media (max-width: 91em) {
+  .header-container {
+    padding: 0 8rem;
+  }
   #about {
     padding: 8rem 1rem;
   }
@@ -25,6 +28,9 @@
 
 /* 1248px */
 @media (max-width: 78em) {
+  .header-container {
+    padding: 0 2rem;
+  }
   .about-row {
     width: 110rem;
   }
@@ -53,6 +59,19 @@
 
 /* NAVBAR */
 @media (max-width: 1200px) {
+  .header-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header-text {
+    text-align: center;
+  }
+
+  .animation-section {
+    height: auto;
+  }
+  .question {
+    top: -7rem;
+  }
   .icons {
     display: inline-flex;
   }
@@ -343,11 +362,17 @@
 
 /* 752px */
 @media (max-width: 47em) {
-  .header-text {
-    margin-top: 5rem;
+  #header{
+    height: 80rem;
+  }
+  .tagline {
+    font-size: 2rem;
+  }
+  .cloud {
+    width: 34rem;
   }
   .header-text h2 {
-    font-size: 2.2rem;
+    font-size: 4.2rem;
   }
   .header-container {
     padding: 0;
@@ -520,13 +545,13 @@
     font-size: 4.4rem;
   }
   .about-row {
-    width: 33rem;
+    width: 32rem;
   }
   .about-col-1 {
     padding: 0 2rem 3rem;
   }
   .about-col-1 p {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .about-col-2 {
     margin-left: 2rem;

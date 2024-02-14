@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prabh/Portfolio</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/quries.css" />
-    <link
-    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-    rel="stylesheet"
-  />
+    <link rel="stylesheet" href="css/animation.css" />
     <script
       src="https://kit.fontawesome.com/ab98375355.js"
       crossorigin="anonymous"
@@ -17,7 +18,7 @@
     <script defer src="js/script.js"></script>
   </head>
   <body>
-    <div class="bg">
+    <!-- <div class="bg">
       <div class="bubbles">
         <span style="--i: 11"></span>
         <span style="--i: 12"></span>
@@ -60,37 +61,52 @@
         <span style="--i: 13"></span>
         <span style="--i: 28"></span>
       </div>
-    </div>
+    </div> -->
     <!--^ ------------------------- HEADER-SECTION-START -------------------------  -->
     <header id="header">
+      <nav class="main-nav">
+        <h1>Pr<span class="logo-name">ab</span>h</h1>
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+          <i class="bx bx-menu" id="menu-icon"></i>
+          <i class="bx bx-x" id="close-icon"></i>
+        </label>
+        <ul class="main-nav-list">
+          <li style="--i: 0">
+            <a class="main-nav-link" href="#about">About</a>
+          </li>
+          <li style="--i: 1">
+            <a class="main-nav-link" href="#skills">Skills</a>
+          </li>
+          <li style="--i: 2">
+            <a class="main-nav-link" href="#experience">Experience</a>
+          </li>
+          <li style="--i: 3">
+            <a class="main-nav-link" href="#experience">Education</a>
+          </li>
+          <li style="--i: 4">
+            <a class="main-nav-link" href="#project">Projects</a>
+          </li>
+          <li style="--i: 5">
+            <a class="main-nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
       <div class="header-container">
-        <nav class="main-nav">
-          <h1>Pr<span class="logo-name">ab</span>h</h1>
-          <input type="checkbox" id="check" />
-          <label for="check" class="icons">
-            <i class="bx bx-menu" id="menu-icon"></i>
-            <i class="bx bx-x" id="close-icon"></i>
-          </label>
-          <ul class="main-nav-list">
-            <li style="--i: 0"><a class="main-nav-link" href="#about">About</a></li>
-            <li style="--i: 1"><a class="main-nav-link" href="#skills">Skills</a></li>
-            <li style="--i: 2"><a class="main-nav-link" href="#experience">Experience</a></li>
-            <li style="--i: 3"><a class="main-nav-link" href="#experience">Education</a></li>
-            <li style="--i: 4"><a class="main-nav-link" href="#project">Projects</a></li>
-            <li style="--i: 5"><a class="main-nav-link" href="#contact">Contact</a></li>
-          </ul>
-        </nav>
         <div class="header-text">
-          <p># Front-end Developer</p>
+          <p class="tagline"># Front-end Developer</p>
           <h2>
-            Hello,<br />
-            I'm <span class="my-name">Prabhjot</span>
+            Hello, I'm<br />
+            <span class="my-name">Prabhjot</span>
             Singh
           </h2>
-          <p>
-            What i do <span class="blink">? ?</span> <br />
-            I love to create bugs that are unsolvable;
-          </p>
+       
+        </div>
+        <div class="animation-section">
+          <p class="question">What i do <span class="blink">? ?</span> <br /></p>
+          <div class="container">
+            <div class="cloud"></div>
+          </div>
         </div>
       </div>
     </header>

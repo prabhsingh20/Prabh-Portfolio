@@ -180,3 +180,29 @@ document
     let confetti_button = confetti.create(canvas);
     confetti_button().then(() => container.removeChild(canvas));
   });
+
+//! -------------------- FOR CLOUD ANIMATION --------------------
+function generateText() {
+  let cloud = document.querySelector(".cloud");
+  let text = "I love to create bugs that are unsolvable";
+  let words = text.split(" ");
+  let delay = -3;
+
+  words.forEach(function (word, index) {
+    let e = document.createElement("div");
+    // let left = Math.floor(Math.random() * 220);
+    // let left = Math.floor(Math.random() * 240);
+    let left = Math.floor(Math.random() * 260);
+    let size = Math.random() * 1.5;
+
+    e.classList.add("text");
+    cloud.appendChild(e);
+    e.innerText = word;
+    e.style.left = left + "px";
+    e.style.fontSize = 0.7 + size + "rem";
+    // e.style.fontSize = 0.5 + size + "em";
+    e.style.animationDelay = delay + index * 1 + "s"; // Adjust this value for delay between words
+  });
+}
+
+generateText();
