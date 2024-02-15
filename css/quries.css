@@ -550,6 +550,9 @@
 
 /* 432px */
 @media (max-width: 27em) {
+  .main-nav h1{
+    font-size: 3.6rem;
+  }
   .h-one {
     font-size: 4.4rem;
   }
@@ -559,12 +562,13 @@
   .about-col-1 {
     padding: 0 2rem 3rem;
   }
-  .about-col-1 h4{
+  .about-col-1 h4 {
     font-size: 2rem;
   }
   .about-col-1 p {
     letter-spacing: 0.1rem;
     font-size: 1.8rem;
+    line-height: 1.4;
   }
   .about-col-2 {
     margin-left: 2rem;
@@ -575,7 +579,7 @@
   }
   .content {
     width: 30rem;
-    & p{
+    & p {
       line-height: 1.4;
       letter-spacing: 0.1rem;
     }
@@ -601,15 +605,25 @@
     width: 34rem;
     padding-left: 2rem;
 
+    & p {
+      line-height: 1.4;
+    }
     & h2 {
-      font-size: 3rem;
+      font-size: 2.9rem;
+    }
+    & ul li {
+      line-height: 1.4;
     }
   }
-
+  .education-details {
+    & h2 {
+      font-size: 2.5rem;
+    }
+  }
   .detail-section {
     width: 28rem;
 
-    & p{
+    & p {
       height: 16rem;
       line-height: 1.4;
       letter-spacing: 0.1rem;
