@@ -136,13 +136,17 @@
               design principles. I'm constantly learning and exploring new
               technologies to enhance my skills.
             </p>
-            <a
-              href="img/cv/Prabhjot's Resume.pdf"
-              target="_blank"
-              download="Prabhjot_CV"
-            >
-              <button class="btn btn-1">Download CV</button></a
-            >
+            <div class="button-wrapper">
+              <a
+                href="img/cv/Prabhjot's Resume.pdf"
+                target="_blank"
+                download="Prabhjot_CV"
+              >
+                <button class="btn btn-1 confetti-button">
+                  Download CV
+                </button></a
+              >
+            </div>
           </div>
 
           <div class="about-col-2">
@@ -1111,13 +1115,13 @@
                 ><i class="fa-brands fa-whatsapp"></i
               ></a>
             </div>
-            <div class="button-wrapper">
+            <div class="button-wrapper-two">
               <a
                 href="img/cv/Prabhjot's Resume.pdf"
                 target="_blank"
                 download="Prabhjot_CV"
               >
-                <button class="btn btn-5 confetti-button">
+                <button class="btn btn-5 confetti-button-two">
                   Download CV
                 </button></a
               >
@@ -1125,21 +1129,22 @@
           </div>
           <div class="contact-right">
             <form name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your Name" required />
-              <input
-                type="email"
-                name="Email"
-                placeholder="Your Email"
-                required
-              />
-              <textarea
-                name="Message"
-                rows="6"
-                placeholder="Your Message or Feedback"
-              ></textarea>
+              <div class="inputBox">
+                <input type="text" name="Name" required />
+                <span>Your Name</span>
+              </div>
+              <div class="inputBox">
+                <input type="email" name="Email" required />
+                <span>Your Email</span>
+              </div>
+              <div class="inputBox">
+                <textarea name="Message" rows="6" required></textarea>
+                <span>Your Message or Feedback</span>
+              </div>
               <input type="submit" hidden />
-              <button type="submit" class="btn">Submit</button>
+              <button type="submit" class="btn" id="subBtn">Submit</button>
             </form>
+            <div class="dots-bars-6" id="loader"></div>
             <p id="message"></p>
           </div>
         </div>

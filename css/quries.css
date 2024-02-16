@@ -311,6 +311,7 @@
     & p {
       height: 20rem;
       overflow: scroll;
+      overflow-x: hidden;
     }
   }
 
@@ -364,16 +365,6 @@
 
 /* 752px */
 @media (max-width: 47em) {
-  /* .header-container {
-    height: auto;
-    margin-top: 15rem;
-  }
-  .animation-section {
-    height: 50rem;
-  }
-  .question {
-    top: 4rem;
-  } */
   .tagline {
     font-size: 2rem;
   }
@@ -395,6 +386,7 @@
   .about-col-1 p {
     height: 33rem;
     overflow: scroll;
+    overflow-x: hidden;
     margin-top: 2rem;
   }
   .about-col-2 {
@@ -550,7 +542,7 @@
 
 /* 432px */
 @media (max-width: 27em) {
-  .main-nav h1{
+  .main-nav h1 {
     font-size: 3.6rem;
   }
   .h-one {

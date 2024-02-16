@@ -113,11 +113,17 @@ const scriptURL =
   "https://script.google.com/macros/s/AKfycbwrRmZYx8lsj0VTNbc9pOHj_4SsE_12SzWmUBKaSflAcWdlegSLDYaSBFalUQRIJ4Fs/exec";
 const form = document.forms["submit-to-google-sheet"];
 const message = document.getElementById("message");
+const subBtn = document.getElementById("subBtn");
+const loader = document.getElementById("loader");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  loader.style.display = "block";
+  subBtn.style.display = "none";
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
+      loader.style.display = "none";
+      subBtn.style.display = "block";
       message.innerHTML =
         "Message Sent Successfully <span class='tick'>✔</span>";
       setTimeout(function () {
@@ -125,7 +131,11 @@ form.addEventListener("submit", (e) => {
       }, 5000);
       form.reset();
     })
-    .catch((error) => console.error("Error!", error.message));
+    .catch((error) => {
+      loader.style.display = "none";
+      subBtn.style.display = "block";
+      console.error("Error!", error.message);
+    });
 });
 
 //! -------------------- FOR ABOUT US BUTTON SHAKE --------------------
@@ -175,6 +185,20 @@ document
     canvas.width = 600;
     canvas.height = 600;
     let container = document.getElementsByClassName("button-wrapper")[0];
+    container.appendChild(canvas);
+
+    let confetti_button = confetti.create(canvas);
+    confetti_button().then(() => container.removeChild(canvas));
+  });
+
+document
+  .getElementsByClassName("confetti-button-two")[0]
+  .addEventListener("click", () => {
+    // confetti();
+    let canvas = document.createElement("canvas");
+    canvas.width = 600;
+    canvas.height = 500;
+    let container = document.getElementsByClassName("button-wrapper-two")[0];
     container.appendChild(canvas);
 
     let confetti_button = confetti.create(canvas);

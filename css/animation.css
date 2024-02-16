@@ -1,0 +1,100 @@
+/* LOADER ANIMATON */
+
+.dots-bars-6 {
+  display: none;
+  color: var(--main-color);
+  margin: 2rem 0 0 4rem;
+  width: 45px;
+  height: 20px;
+  --c: radial-gradient(farthest-side, currentColor 93%, #0000);
+  background: var(--c) 0 0, var(--c) 50% 0;
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
+  position: relative;
+  clip-path: inset(-200% -100% 0 0);
+  animation: db6-0 1.5s linear infinite;
+}
+.dots-bars-6:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background: currentColor;
+  left: -16px;
+  top: 0;
+  animation: db6-1 1.5s linear infinite,
+    db6-2 0.5s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+.dots-bars-6:after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: db6-3 1.5s linear infinite;
+}
+
+@keyframes db6-0 {
+  0%,
+  30% {
+    background-position: 0 0, 50% 0;
+  }
+  33% {
+    background-position: 0 100%, 50% 0;
+  }
+  41%,
+  63% {
+    background-position: 0 0, 50% 0;
+  }
+  66% {
+    background-position: 0 0, 50% 100%;
+  }
+  74%,
+  100% {
+    background-position: 0 0, 50% 0;
+  }
+}
+
+@keyframes db6-1 {
+  90% {
+    transform: translateY(0);
+  }
+  95% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(15px);
+    left: calc(100% - 8px);
+  }
+}
+
+@keyframes db6-2 {
+  100% {
+    top: -0.1px;
+  }
+}
+
+@keyframes db6-3 {
+  0%,
+  80%,
+  100% {
+    transform: translate(0);
+  }
+  90% {
+    transform: translate(26px);
+  }
+}
+
+.nature-2 {
+  margin: 2rem 0 0 2rem;
+  width: calc(6 * 30px);
+  height: 50px;
+  display: flex;
+  color: #8d7958;
+  filter: drop-shadow(30px 25px 0 currentColor)
+    drop-shadow(60px 0 0 currentColor) drop-shadow(120px 0 0 currentColor);
+  clip-path: inset(0 100% 0 0);
+  animation: a2 2s infinite steps(7);
+}

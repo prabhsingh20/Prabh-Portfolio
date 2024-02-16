@@ -715,7 +715,9 @@ body {
   margin-top: 1.8rem;
   height: 35rem;
   overflow: scroll;
+  overflow-x: hidden;
 }
+
 #education {
   display: flex;
   align-items: center;
@@ -725,6 +727,7 @@ body {
 .education-details {
   height: 48rem;
   overflow: scroll;
+  overflow-x: hidden;
 
   & h2 {
     font-size: 2.4rem;
@@ -795,6 +798,7 @@ body {
     letter-spacing: 0.2rem;
     color: var(--primary-paragraph);
     overflow: scroll;
+    overflow-x: hidden;
   }
 
   & .svg-container {
@@ -910,15 +914,55 @@ body {
 form input,
 form textarea {
   width: 100%;
-  border: 0;
   outline: none;
-  background: #262626;
+  border: 1px solid rgba(225, 225, 225, 0.25);
+  background: var(--secondary-background);
   padding: 1.5rem;
   margin: 1.5rem 0;
   color: var(--primary-text);
   font-size: 1.8rem;
   border-radius: 0.6rem;
+  transition: 0.5s;
 }
+.inputBox {
+  position: relative;
+}
+.inputBox span {
+  position: absolute;
+  top: 3rem;
+  left: 2rem;
+  pointer-events: none;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span,
+.inputBox textarea:valid ~ span,
+.inputBox textarea:focus ~ span {
+  color: var(--main-color);
+  transform: translateX(10px) translateY(-23px);
+  font-size: 1.2rem;
+  padding: 0 10px;
+  background: var(--secondary-background);
+  border-left: 1px solid var(--main-color);
+  border-right: 1px solid var(--main-color);
+}
+.inputBox input:valid,
+.inputBox input:focus,
+.inputBox textarea:valid,
+.inputBox textarea:focus {
+  border: 1px solid var(--main-color);
+}
+.tick {
+  color: rgb(3, 173, 3);
+}
+
+.btn-5 {
+  margin-top: 5rem;
+}
+
 .copyright {
   text-align: center;
   background: var(--mainGradient-color);
@@ -934,32 +978,36 @@ form textarea {
   display: inline-block;
   margin: 0.5rem;
 }
-.tick {
-  color: rgb(3, 173, 3);
-}
-
-.btn-5 {
-  margin-top: 5rem;
-}
 
 .button-wrapper {
   position: relative;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* width: 20rem;
-  height: 6rem; */
 }
 
 .button-wrapper canvas {
   position: absolute;
   top: 55%;
-  left: 22%;
+  left: 16%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.button-wrapper-two {
+  position: relative;
+}
+
+.button-wrapper-two canvas {
+  position: absolute;
+  top: 55%;
+  left: 24%;
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
 ::-webkit-scrollbar {
-  scrollbar-width: none;
+  width: 0.3rem;
 }
-
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--mainGradient-color);
+}
 /** ------------------------- CONTACT-END ------------------------- */
