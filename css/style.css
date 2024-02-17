@@ -51,49 +51,6 @@ body {
   /* --secondary-background: #171717; */
 }
 
-.bg {
-  position: absolute;
-  height: 82rem;
-  width: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-.bubbles {
-  position: relative;
-  display: flex;
-  filter: blur(0.5rem);
-}
-.bubbles span {
-  position: relative;
-  min-width: 3rem;
-  height: 3rem;
-  background: #4fc3dc;
-  border-radius: 50%;
-  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 10px #4fc3dc;
-  margin: 0 4px;
-  animation: falling 15s linear infinite;
-  animation-duration: calc(75s / var(--i));
-}
-.bubbles span:nth-child(even) {
-  background: #ff2d75;
-  box-shadow: 0 0 0 10px #ff2d75, 0 0 50px #ff2d75, 0 10px #ff2d75;
-}
-@keyframes falling {
-  0% {
-    transform: translateY(-10vh) scale(0);
-  }
-  100% {
-    transform: translateY(100vh) scale(1);
-  }
-}
-/* @keyframes falling {
-  0% {
-    transform: translateY(100vh) scale(0);
-  }
-  100% {
-    transform: translateY(-10vh) scale(1);
-  }
-} */
 /** ------------------------- NAVIGATION-START ------------------------- */
 
 .logo-name {
@@ -198,15 +155,7 @@ body {
 .main-nav-link:hover::after {
   animation: line 4s infinite;
 }
-@keyframes line {
-  50% {
-    left: 0;
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}
+
 .header-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -217,7 +166,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* margin-top: 25rem; */
   font-size: 3rem;
 }
 .tagline {
@@ -232,17 +180,6 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .blink {
@@ -315,17 +252,6 @@ body {
   animation: animate 10s linear infinite;
 }
 
-@keyframes animate {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-  70% {
-    transform: translateY(200px) scale(1);
-  }
-  100% {
-    transform: translateY(200px) scale(0);
-  }
-}
 /** ------------------------- NAVIGATION-END ------------------------- */
 /* REUSEABEL */
 .h-one {
@@ -337,6 +263,28 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.btn {
+  text-align: center;
+  color: var(--main-color);
+  background: none;
+  padding: 2rem 4rem;
+  border: 2px solid var(--main-color);
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 2rem;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  transition: transform 0.1s linear;
+
+  &:active {
+    transform: scale(0.85);
+  }
+
+  &:hover {
+    color: var(--primary-text);
+    background: var(--mainGradient-color);
+  }
 }
 /** ------------------------- ABOUT-START ------------------------- */
 
@@ -366,19 +314,27 @@ body {
 .about-col-1 {
   border-right: 1px solid var(--main-color);
   padding: 0 8rem;
+
+  & h4 {
+    margin-top: 2rem;
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+
+  & p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    color: var(--primary-paragraph);
+  }
 }
-.about-col-1 h4 {
-  margin-top: 2rem;
-  font-size: 2.4rem;
-  font-weight: 500;
+
+.shake-hand {
+  display: inline-block;
+  animation: shake 0.5s ease 5 1s;
 }
-.about-col-1 p {
-  margin-top: 1rem;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 0.2rem;
-  color: var(--primary-paragraph);
-}
+
 .about-col-2 {
   display: grid;
   grid-template-columns: 1fr;
@@ -404,46 +360,12 @@ body {
   }
 }
 
-.btn {
-  text-align: center;
-  color: var(--main-color);
-  background: none;
-  padding: 2rem 4rem;
-  border: 2px solid var(--main-color);
-  border-radius: 15px;
-  font-weight: 700;
-  font-size: 2rem;
-  cursor: pointer;
-  letter-spacing: 0.1rem;
-  transition: transform 0.1s linear;
-
-  &:active {
-    transform: scale(0.85);
-  }
-
-  &:hover {
-    color: var(--primary-text);
-    background: var(--mainGradient-color);
-  }
-}
 .btn-1 {
   margin-top: 4rem;
   animation: shake 1s infinite;
 }
 .shake-slow {
   animation-delay: 4s;
-}
-
-@keyframes shake {
-  0%,
-  50%,
-  100% {
-    transform: rotate(0deg);
-  }
-  25%,
-  75% {
-    transform: rotate(-5deg);
-  }
 }
 
 /** ------------------------- ABOUT-END ------------------------- */
@@ -508,7 +430,7 @@ body {
   content: "";
   position: absolute;
   left: -1px;
-  top: 22px; /* Adjust this value to align the line with the center of the dot */
+  top: 22px;
   bottom: 0;
   width: 2px;
   background-color: var(--primary-text);
@@ -516,7 +438,7 @@ body {
 }
 
 .timeline-item:last-child::after {
-  display: none; /* Hide line after last item */
+  display: none;
 }
 
 .timeline-item.active::before {
@@ -716,6 +638,7 @@ body {
   height: 35rem;
   overflow: scroll;
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 #education {
@@ -799,6 +722,7 @@ body {
     color: var(--primary-paragraph);
     overflow: scroll;
     overflow-x: hidden;
+    scrollbar-width: none;
   }
 
   & .svg-container {
@@ -902,8 +826,10 @@ body {
     transition: transform 0.5s;
   }
 }
+#whatsapp {
+  font-size: 2.8rem;
+}
 .social-icons a:hover {
-  /* color: var(--main-color); */
   background: var(--mainGradient-color);
   -webkit-background-clip: text;
   background-clip: text;
@@ -993,7 +919,6 @@ form textarea {
 .button-wrapper-two {
   position: relative;
 }
-
 .button-wrapper-two canvas {
   position: absolute;
   top: 55%;
@@ -1002,7 +927,7 @@ form textarea {
   pointer-events: none;
 }
 ::-webkit-scrollbar {
-  width: 0.3rem;
+  width: 0.5rem;
 }
 ::-webkit-scrollbar-track {
   background: transparent;

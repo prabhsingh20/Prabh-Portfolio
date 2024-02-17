@@ -9,6 +9,9 @@
   .about-row {
     width: 120rem;
   }
+  .button-wrapper-two canvas {
+    left: 30%;
+  }
   .experience-bottom-one {
     left: 26%;
   }
@@ -36,6 +39,9 @@
   }
   .about-col-1 {
     padding: 0 4rem;
+  }
+  .button-wrapper-two canvas {
+    left: 34%;
   }
   .experience-bottom-one {
     left: 22%;
@@ -144,6 +150,12 @@
   }
   .about-col-2-content {
     gap: 1rem;
+  }
+  .button-wrapper canvas {
+    left: 14%;
+  }
+  .button-wrapper-two canvas {
+    left: 14%;
   }
   /* SKILL */
 
@@ -302,6 +314,12 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 10rem;
   }
+  .button-wrapper canvas {
+    left: 16%;
+  }
+  .button-wrapper-two canvas {
+    left: 16%;
+  }
 
   /* SKILL*/
 
@@ -312,6 +330,7 @@
       height: 20rem;
       overflow: scroll;
       overflow-x: hidden;
+      scrollbar-width: none;
     }
   }
 
@@ -388,6 +407,7 @@
     overflow: scroll;
     overflow-x: hidden;
     margin-top: 2rem;
+    scrollbar-width: none;
   }
   .about-col-2 {
     padding: 0;
@@ -395,6 +415,12 @@
   }
   .about-col-2-content {
     gap: 0.5rem;
+  }
+  .button-wrapper canvas {
+    left: 20%;
+  }
+  .button-wrapper-two canvas {
+    left: 22%;
   }
   .timeline {
     width: 50rem;
@@ -461,6 +487,12 @@
   .about-col-2-content:nth-child(3) {
     grid-area: 3 / span 2;
   }
+  .button-wrapper canvas {
+    left: 24%;
+  }
+  .button-wrapper-two canvas {
+    left: 24%;
+  }
   .content {
     width: 45rem;
   }
@@ -499,6 +531,12 @@
   .about-col-2-content {
     flex-direction: column;
     gap: 0;
+  }
+  .button-wrapper canvas {
+    left: 32%;
+  }
+  .button-wrapper-two canvas {
+    left: 30%;
   }
   .timeline {
     grid-template-columns: repeat(2, 1fr);
@@ -568,6 +606,9 @@
   }
   .about-col-2-content {
     gap: 0;
+  }
+  .button-wrapper canvas {
+    left: 38%;
   }
   .content {
     width: 30rem;

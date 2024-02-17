@@ -1,5 +1,73 @@
-/* LOADER ANIMATON */
+/* NAVBAR LINE ANIMATION */
+@keyframes line {
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
 
+/* BLINK ANIMATION */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* TEXT FALLING ANIMATION */
+@keyframes animate {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  70% {
+    transform: translateY(200px) scale(1);
+  }
+  100% {
+    transform: translateY(200px) scale(0);
+  }
+}
+
+/* SHAKE HAND ANIMATION */
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* CV BUTTON ANIMATION */
+@keyframes shake {
+  0%,
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25%,
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+/* LOADER ANIMATON */
 .dots-bars-6 {
   display: none;
   color: var(--main-color);
