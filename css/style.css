@@ -268,7 +268,7 @@ body {
   text-align: center;
   color: var(--main-color);
   background: none;
-  padding: 2rem 4rem;
+  padding: 1.6rem 3.2rem;
   border: 2px solid var(--main-color);
   border-radius: 15px;
   font-weight: 700;
@@ -504,16 +504,13 @@ body {
 .svg-center {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
 }
 .svg {
-  margin-top: 5rem;
-  height: 10rem;
-  filter: grayscale(1);
+  margin-top: 4rem;
+  font-size: 12rem;
   opacity: 0.3;
-  fill: #c2baba;
 }
+
 /** ------------------------- SKILL-END ------------------------- */
 
 /** ------------------------- EXPERIENCE-START ------------------------- */
@@ -638,7 +635,6 @@ body {
   height: 35rem;
   overflow: scroll;
   overflow-x: hidden;
-  scrollbar-width: none;
 }
 
 #education {
@@ -722,19 +718,17 @@ body {
     color: var(--primary-paragraph);
     overflow: scroll;
     overflow-x: hidden;
-    scrollbar-width: none;
   }
-
   & .svg-container {
     display: flex;
     gap: 3rem;
   }
-  & .project-svg {
+  & .language-icons {
     margin-top: 3rem;
-    width: 4rem;
-    height: 4rem;
-    fill: rgb(174, 214, 220);
+    font-size: 4.5rem;
+    color: rgb(174, 214, 220);
   }
+
   & .buttons {
     display: flex;
     gap: 2rem;
@@ -826,9 +820,6 @@ body {
     transition: transform 0.5s;
   }
 }
-#whatsapp {
-  font-size: 2.8rem;
-}
 .social-icons a:hover {
   background: var(--mainGradient-color);
   -webkit-background-clip: text;
@@ -912,7 +903,7 @@ form textarea {
 .button-wrapper canvas {
   position: absolute;
   top: 55%;
-  left: 16%;
+  left: 14%;
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
@@ -922,7 +913,7 @@ form textarea {
 .button-wrapper-two canvas {
   position: absolute;
   top: 55%;
-  left: 24%;
+  left: 22%;
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
@@ -933,6 +924,11 @@ form textarea {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--mainGradient-color);
+  border-radius: 15px;
+  background: var(--primary-paragraph);
+}
+.highlight {
+  color: var(--main-color);
 }
 /** ------------------------- CONTACT-END ------------------------- */
+
