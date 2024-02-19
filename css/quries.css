@@ -77,10 +77,10 @@
     text-align: center;
   }
   .animation-section {
-    height: 50rem;
+    height: 52rem;
   }
   .question {
-    top: 4rem;
+    top: 5rem;
   }
   .icons {
     display: inline-flex;
@@ -257,9 +257,9 @@
   .education-details {
     margin-top: 2rem;
     padding-left: 3rem;
-scrollbar-width: none;
+    scrollbar-width: none;
   }
-  .internship-details{
+  .internship-details {
     scrollbar-width: none;
   }
   .internship-heading {
@@ -269,11 +269,17 @@ scrollbar-width: none;
   /* PROJECT */
   .project-container {
     width: auto;
+    gap: 5rem;
   }
   .box {
     flex-direction: column-reverse;
     align-items: center;
     gap: 3rem;
+    border-bottom: 1px solid var(--primary-paragraph);
+    padding-bottom: 5rem;
+  }
+  .box:last-child {
+    border-bottom: none;
   }
   .detail-section {
     width: 80rem;
@@ -584,6 +590,21 @@ scrollbar-width: none;
   .contact-bottom {
     left: 39%;
   }
+  .icon-container .icon {
+    margin: 3rem 0.8rem 0 0rem;
+  }
+  .icon-container .icon:hover .tooltip {
+    top: -50px;
+  }
+  .icon-container .icon .tooltip {
+    font-size: 10px;
+  }
+  #contact h1{
+    margin-bottom: 6rem;
+  }
+  .btn-5 {
+    margin-top: 3rem;
+  }
 }
 
 /* 432px */
@@ -687,7 +708,7 @@ scrollbar-width: none;
     height: 20rem;
   }
   .contact-row {
-    width: 33rem;
+    width: 31rem;
   }
   .contact-bottom {
     left: 47%;
