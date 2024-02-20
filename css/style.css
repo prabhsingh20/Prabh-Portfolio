@@ -159,23 +159,27 @@ body {
 .header-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 100vh;
-  padding: 0 15rem;
+  padding: 18.5rem 15rem;
 }
 .header-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 3rem;
+  margin-top: 4rem;
 }
 .tagline {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
 }
 .header-text h2 {
   margin-top: 2rem;
-  font-size: 7.4rem;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 2;
 }
 .tubelight {
+  font-size: 7.4rem;
+  font-weight: 700;
   position: relative;
   color: #0e3742;
   /* text-transform: uppercase; */
@@ -198,14 +202,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: relative;
-  height: 90rem;
+  gap: 15rem;
 }
 .question {
-  top: 22rem;
   font-size: 3rem;
-  position: absolute;
 }
 .container {
   position: relative;
@@ -261,7 +262,7 @@ body {
 /* REUSEABEL */
 .h-one {
   position: relative;
-  font-size: 6.2rem;
+  font-size: 5.2rem;
   text-align: center;
   letter-spacing: 0.4rem;
   background: var(--mainGradient-color);
@@ -399,15 +400,14 @@ body {
 
   & h4 {
     margin-top: 2rem;
-    font-size: 2.4rem;
-    font-weight: 500;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
   }
 
   & p {
     margin-top: 1rem;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 0.2rem;
+    font-size: 1.8rem;
     color: var(--primary-paragraph);
   }
 }
@@ -428,6 +428,7 @@ body {
   display: flex;
   gap: 2rem;
   align-items: center;
+
   & h4 {
     font-size: 1.8rem;
     background: var(--mainGradient-color);
@@ -468,12 +469,7 @@ body {
   background: var(--mainGradient-color);
   border-radius: 15px;
 }
-.slash {
-  background: var(--mainGradient-color);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 .skill-container {
   margin: 0 auto;
   margin-top: 1.5rem;
@@ -572,15 +568,15 @@ body {
   box-shadow: 3px 3px 29px 0px var(--main-color);
 
   & h2 {
-    font-size: 3.6rem;
+    font-size: 3rem;
   }
 
   & p {
     font-size: 1.8rem;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
     margin-top: 1rem;
     color: var(--primary-paragraph);
-    line-height: 1.7;
+    line-height: 1.4;
   }
 }
 .svg-center {
@@ -603,7 +599,12 @@ body {
 #experience .active {
   background: var(--secondaryGradient-color);
 }
-
+.slash {
+  background: var(--mainGradient-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .experience-bottom-one {
   position: absolute;
   width: 15rem;
@@ -643,22 +644,16 @@ body {
   text-align: center;
   height: 50rem;
 
-  & img {
-    width: 12rem;
-    height: auto;
-    border-radius: 15px;
-  }
-
   & h2 {
     margin: 0 4rem 0 0;
     padding-left: 4rem;
-    font-size: 5.2rem;
+    font-size: 4.4rem;
     line-height: 1.2;
     cursor: pointer;
   }
 
   & p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-top: 0.5rem;
     letter-spacing: 0.2rem;
     color: var(--primary-paragraph);
@@ -704,7 +699,6 @@ body {
     margin-top: 0.8rem;
     font-size: 1.6rem;
     line-height: 1.6;
-    letter-spacing: 0.1rem;
   }
   & h4 {
     font-size: 1.8rem;
@@ -794,9 +788,7 @@ body {
   & p {
     height: 15rem;
     margin-top: 0.5rem;
-    font-size: 1.7rem;
-    font-weight: 300;
-    letter-spacing: 0.2rem;
+    font-size: 1.8rem;
     color: var(--primary-paragraph);
     overflow: scroll;
     overflow-x: hidden;
@@ -881,13 +873,13 @@ body {
 }
 .contact-left p {
   margin-top: 3rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--primary-paragraph);
 
   & i {
     color: var(--main-color);
     margin-right: 1.5rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 .icon-container {

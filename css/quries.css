@@ -1,7 +1,10 @@
 /* 1456px */
 @media (max-width: 91em) {
   .header-container {
-    padding: 0 8rem;
+    padding: 18.5rem 10rem;
+  }
+  .animation-section {
+    margin-left: 6rem;
   }
   #about {
     padding: 8rem 1rem;
@@ -35,8 +38,9 @@
 /* 1248px */
 @media (max-width: 78em) {
   .header-container {
-    padding: 0 2rem;
+    padding: 18.5rem 4rem;
   }
+
   .about-row {
     width: 110rem;
   }
@@ -70,14 +74,14 @@
 @media (max-width: 1200px) {
   .header-container {
     grid-template-columns: repeat(1, 1fr);
-    height: auto;
-    margin-top: 15rem;
+    gap: 6rem;
+    padding: 10rem 4rem 0;
   }
   .header-text {
     text-align: center;
   }
   .animation-section {
-    height: 52rem;
+    height: 50rem;
   }
   .question {
     top: 5rem;
@@ -132,6 +136,9 @@
 @media (max-width: 72em) {
   .h-one {
     font-size: 5.2em;
+  }
+  .animation-section {
+    margin-left: 0;
   }
   .about-row {
     width: 90rem;
@@ -407,9 +414,7 @@
   .header-text h2 {
     font-size: 4.2rem;
   }
-  .header-container {
-    padding: 0;
-  }
+
   .about-row {
     width: 55rem;
   }
@@ -599,7 +604,7 @@
   .icon-container .icon .tooltip {
     font-size: 10px;
   }
-  #contact h1{
+  #contact h1 {
     margin-bottom: 6rem;
   }
   .btn-5 {
@@ -611,6 +616,9 @@
 @media (max-width: 27em) {
   .main-nav h1 {
     font-size: 3.6rem;
+  }
+  .header-container {
+    padding: 10rem 0 0;
   }
   .h-one {
     font-size: 4.4rem;
@@ -625,8 +633,7 @@
     font-size: 2rem;
   }
   .about-col-1 p {
-    letter-spacing: 0.1rem;
-    font-size: 1.8rem;
+    letter-spacing: 0;
     line-height: 1.4;
   }
   .about-col-2 {
@@ -644,9 +651,13 @@
   }
   .content {
     width: 30rem;
+
+    & h2 {
+      font-size: 3rem;
+    }
     & p {
+      letter-spacing: 0;
       line-height: 1.4;
-      letter-spacing: 0.1rem;
     }
   }
   .skill-container {
@@ -671,6 +682,7 @@
     padding-left: 2rem;
 
     & p {
+      letter-spacing: 0;
       line-height: 1.4;
     }
     & h2 {
@@ -688,10 +700,12 @@
   .detail-section {
     width: 28rem;
 
+    & h2 {
+      font-size: 3rem;
+    }
     & p {
       height: 16rem;
       line-height: 1.4;
-      letter-spacing: 0.1rem;
     }
     & .svg-container {
       gap: 2rem;
