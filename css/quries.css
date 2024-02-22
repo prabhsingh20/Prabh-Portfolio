@@ -80,6 +80,9 @@
   .header-text {
     text-align: center;
   }
+  .starOption {
+    top: 17rem;
+  }
   .animation-section {
     height: 50rem;
   }
@@ -492,10 +495,12 @@
 
 /* 608px */
 @media (max-width: 38em) {
+  .header-text h2 {
+    font-size: 3.6rem;
+  }
   .about-row {
     width: 45rem;
   }
-
   .about-col-2 {
     gap: 1.5rem;
   }
@@ -704,7 +709,7 @@
       font-size: 3rem;
     }
     & p {
-      height: 16rem;
+      height: 15rem;
       line-height: 1.4;
     }
     & .svg-container {

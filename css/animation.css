@@ -54,7 +54,7 @@
 }
 
 /*& TEXT FALLING ANIMATION */
-@keyframes animate {
+@keyframes textFalling {
   0% {
     transform: translateY(0) scale(1);
   }
@@ -103,8 +103,8 @@
   display: none;
   color: var(--main-color);
   margin: 2rem 0 0 4rem;
-  width: 45px;
-  height: 20px;
+  width: 4.5rem;
+  height: 2rem;
   --c: radial-gradient(farthest-side, currentColor 93%, #0000);
   background: var(--c) 0 0, var(--c) 50% 0;
   background-size: 8px 8px;
@@ -185,15 +185,3 @@
     transform: translate(26px);
   }
 }
-
-/* .nature-2 {
-  margin: 2rem 0 0 2rem;
-  width: calc(6 * 30px);
-  height: 50px;
-  display: flex;
-  color: #8d7958;
-  filter: drop-shadow(30px 25px 0 currentColor)
-    drop-shadow(60px 0 0 currentColor) drop-shadow(120px 0 0 currentColor);
-  clip-path: inset(0 100% 0 0);
-  animation: a2 2s infinite steps(7);
-} */

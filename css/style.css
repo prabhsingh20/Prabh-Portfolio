@@ -34,7 +34,6 @@ body {
 
   /** GRADIENT */
   --mainGradient-color: linear-gradient(180deg, #2c69d1, #0abcf9);
-  --thirdGradient-color: linear-gradient(30deg, #2c69d1, #0abcf9);
   --secondaryGradient-color: linear-gradient(
     90deg,
     rgb(0, 155, 217, 0) 0%,
@@ -155,7 +154,10 @@ body {
 .main-nav-link:hover::after {
   animation: line 4s infinite;
 }
-
+#profile-section {
+  margin: 0 auto;
+  max-width: 150rem;
+}
 .header-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -172,10 +174,9 @@ body {
   font-size: 2.4rem;
 }
 .header-text h2 {
-  margin-top: 2rem;
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 600;
-  line-height: 2;
+  line-height: 2.6;
 }
 .tubelight {
   font-size: 7.4rem;
@@ -197,6 +198,36 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: blink 1s infinite;
+}
+
+.starOption {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 3.5rem;
+  font-size: 1.2rem;
+  color: var(--primary-text);
+  background: var(--mainGradient-color);
+  text-decoration: none;
+  right: 0;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+  transition: 0.7s;
+
+  & i {
+    padding: 1.2rem 1rem 1.1rem 1.3rem;
+    color: gold;
+  }
+
+  & span {
+    padding: 0.5rem 1.5rem 0.5rem 0rem;
+  }
+  &:hover {
+    width: 8rem;
+  }
 }
 .animation-section {
   display: flex;
@@ -255,7 +286,7 @@ body {
   color: #fff;
   text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 30px #fff;
   transform-origin: bottom;
-  animation: animate 10s linear infinite;
+  animation: textFalling 10s linear infinite;
 }
 
 /** ------------------------- NAVIGATION-END ------------------------- */
@@ -282,10 +313,10 @@ body {
   background: transparent;
   color: #fff;
   color: var(--main-color);
-  /* -webkit-box-reflect: below 0px linear-gradient(transparent, #0002); */
   transition: 0.5s;
   transition-delay: 0s;
   border-radius: 15px;
+  cursor: pointer;
 }
 .glow-btn button:hover {
   transition-delay: 1.5s;
@@ -643,13 +674,13 @@ body {
   flex-direction: column;
   text-align: center;
   height: 50rem;
+  cursor: pointer;
 
   & h2 {
     margin: 0 4rem 0 0;
     padding-left: 4rem;
     font-size: 4.4rem;
     line-height: 1.2;
-    cursor: pointer;
   }
 
   & p {
@@ -786,7 +817,7 @@ body {
   }
 
   & p {
-    height: 15rem;
+    height: 16rem;
     margin-top: 0.5rem;
     font-size: 1.8rem;
     color: var(--primary-paragraph);
