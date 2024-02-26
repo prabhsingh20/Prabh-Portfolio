@@ -638,6 +638,7 @@
     font-size: 2rem;
   }
   .about-col-1 p {
+    font-size: 1.6rem;
     letter-spacing: 0;
     line-height: 1.4;
   }
@@ -661,6 +662,7 @@
       font-size: 3rem;
     }
     & p {
+      font-size: 1.6rem;
       letter-spacing: 0;
       line-height: 1.4;
     }
@@ -694,6 +696,7 @@
       font-size: 2.9rem;
     }
     & ul li {
+      font-size: 1.6rem;
       line-height: 1.4;
     }
   }
@@ -709,7 +712,8 @@
       font-size: 3rem;
     }
     & p {
-      height: 15rem;
+      font-size: 1.6rem;
+      height: 16rem;
       line-height: 1.4;
     }
     & .svg-container {
