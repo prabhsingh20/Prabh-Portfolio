@@ -383,6 +383,11 @@
       padding-left: 0;
     }
   }
+  #certificate {
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 1.5rem;
+  }
 
   /* PROJECT */
   .img-section img {

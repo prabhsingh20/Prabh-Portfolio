@@ -625,7 +625,7 @@ body {
 /** ------------------------- EXPERIENCE-START ------------------------- */
 #experience {
   padding: 8rem 0;
-  background-color: var(--secondary-background);
+  background-color: var(--primary-background);
 }
 #experience .active {
   background: var(--secondaryGradient-color);
@@ -739,7 +739,8 @@ body {
 
 .internship-details {
   margin-top: 1.8rem;
-  height: 35rem;
+  /* height: 35rem; */
+  height: 31rem;
   overflow: scroll;
   overflow-x: hidden;
 }
@@ -774,11 +775,30 @@ body {
 .material-symbols-outlined {
   color: var(--main-color);
 }
+#certificate {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 8rem;
+  list-style: circle;
+  font-weight: 600;
+
+  & a {
+    border-bottom: 1px solid var(--main-color);
+    text-decoration: none;
+    color: var(--main-color);
+
+    &:hover {
+      border-bottom: 1px solid gold;
+      color: gold;
+    }
+  }
+}
 /** ------------------------- EXPERIENCE-END ------------------------- */
 
 /** ------------------------- PROJECT-START ------------------------- */
 #project {
   padding: 4rem 0;
+  background-color: var(--secondary-background);
 }
 
 #project h1 {
@@ -923,7 +943,7 @@ body {
   display: inline-flex;
 }
 .icon-container .icon {
-  margin: 30px 15px 0 0;
+  margin: 30px 8px 0 0;
   text-align: center;
   cursor: pointer;
   display: flex;
@@ -946,8 +966,8 @@ body {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-  & .fa-facebook-f {
-    color: #3b5999;
+  & .fa-twitter {
+    color: #46c1f6;
   }
   & .fa-whatsapp {
     color: #25d366;
@@ -963,25 +983,25 @@ body {
   }
 }
 .icon-container {
-  .facebook {
+  .twitter {
     border-radius: 50%;
-    border: 2px solid #3b5999;
+    border: 1px solid #46c1f6;
   }
   .whatsapp {
     border-radius: 50%;
-    border: 2px solid #25d366;
+    border: 1px solid #25d366;
   }
   .instagram {
     border-radius: 50%;
-    border: 2px solid #e1306c;
+    border: 1px solid #e1306c;
   }
   .github {
     border-radius: 50%;
-    border: 2px solid #333;
+    border: 1px solid #333;
   }
   .linkedin {
     border-radius: 50%;
-    border: 2px solid #0077b5;
+    border: 1px solid #0077b5;
   }
 }
 .icon-container .icon span i {
@@ -1027,10 +1047,10 @@ body {
 .icon-container .icon:hover .tooltip {
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
 }
-.icon-container .facebook:hover span,
-.icon-container .facebook:hover .tooltip,
-.icon-container .facebook:hover .tooltip:before {
-  background: #3b5999;
+.icon-container .twitter:hover span,
+.icon-container .twitter:hover .tooltip,
+.icon-container .twitter:hover .tooltip:before {
+  background: #46c1f6;
 }
 .icon-container .whatsapp:hover span,
 .icon-container .whatsapp:hover .tooltip,
@@ -1108,10 +1128,11 @@ form textarea {
 .copyright {
   text-align: center;
   background: var(--mainGradient-color);
-  padding: 2rem 0;
+  padding: 1rem 0;
+  /* padding: 2rem 0; */
   font-weight: 300;
-  margin-top: 8rem;
-  font-size: 1.4rem;
+  margin-top: 5rem;
+  font-size: 1.2rem;
   letter-spacing: 0.2rem;
 }
 #message {
