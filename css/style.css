@@ -845,6 +845,7 @@ body {
     overflow-x: hidden;
   }
   & .svg-container {
+    cursor: pointer;
     display: flex;
     gap: 3rem;
   }
@@ -866,6 +867,7 @@ body {
   flex-basis: 40%;
 }
 .img-section img {
+  cursor: pointer;
   width: 50rem;
   height: 32rem;
   border-radius: 15px;
