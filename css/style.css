@@ -739,8 +739,8 @@ body {
 
 .internship-details {
   margin-top: 1.8rem;
-  /* height: 35rem; */
-  height: 31rem;
+  height: 35rem;
+  /* height: 31rem; */
   overflow: scroll;
   overflow-x: hidden;
 }
